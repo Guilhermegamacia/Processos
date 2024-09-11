@@ -1,0 +1,1 @@
+"C:\Users\Diógenes\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"  execute --file "C:\Processos\CiaTalentos\Vale\RPA_EnvioMalaDireta - Descritivo de area\Package\MalaDiretaSimples-Performer.1.0.2.nupkg"

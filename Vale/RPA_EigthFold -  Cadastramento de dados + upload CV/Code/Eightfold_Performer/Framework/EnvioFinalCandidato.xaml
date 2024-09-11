@@ -1,0 +1,270 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnvioFinalCandidato" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_UrlPipeline" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>933,2133</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EnvioFinalCandidato" sap:VirtualizedContainerService.HintSize="512,2068" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: ESTAGIARIO SUPERIOR 6H | Eightfold" sap:VirtualizedContainerService.HintSize="450,1980" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1740" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State - Verify Pop up'Confirmar calibração'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,483" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  - Close Pop up 'SVG'" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="4b24b2dd-158f-49de-8cec-c0a9cf4b4cc0" CvTextArea="1190, 511, 14, 14" CvTextArgument="X" CvType="Text" DesignTimeRectangle="1188, 509, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl innertext='Confirmar calibraçãoEncontre leads relevantes e priorize novos candidatos com base na sua calibração. Para obter melhores resultados, você gostaria de revisar e confirmar a calibração padrão?Manter padrãoRevisar Calibração' idx='1' /&gt;&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;span&amp;gt;svg' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Confirmar calibraçãoEncontre leads relevantes e priorize novos candidatos com base na sua calibração. Para obter melhores resultados, você gostaria de revisar e confirmar a calibração padrão?Manter padrãoRevisar Calibração' /&gt;&lt;webctrl aria-role='presentation' type='' tag='svg' class='' aaname='' /&gt;" Guid="a6429d08-dacd-4699-82cb-b3b8ec3e9a5b" InformativeScreenshot="9a034665e86f0de76f72c2c81403b899.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO SUPERIOR *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message - Close Pop up" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Performed click to close pop up&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="2277eb70-7141-4205-b006-6963f0738b87" CvTextArea="719, 510, 198, 21" CvTextArgument="Confirmar calibracao" CvType="Text" DesignTimeRectangle="720, 504, 196, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='dialog-label-21' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dialog-label-21' tag='SPAN' type='' class='' aaname='Confirmar calibração' check:innerText='Confirmar calibração' /&gt;" Guid="9c9018a8-bf03-4620-971a-28733f7f9a78" InformativeScreenshot="9d47af14f0d30ebbffa258b942099108.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO SUPERIOR 6H | Eightfold' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="2277eb70-7141-4205-b006-6963f0738b87" CvTextArea="1190, 511, 14, 14" CvTextArgument="X" CvType="Text" DesignTimeRectangle="1188, 509, 20, 20" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Confirmar calibração' /&gt;&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;span&amp;gt;svg' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Confirmar calibração' /&gt;&lt;webctrl aria-role='presentation' type='' tag='svg' class='' aaname='' /&gt;" Guid="f3103adf-2cac-4570-a232-a24fbaa02906" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click - Click Candidate 'AD'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="9d2da0c7-b907-48a5-ae9d-edb2f2e57911" CvElementArea="260, 486, 44, 45" CvTextArea="270, 500, 24, 15" CvType="Icon" DesignTimeRectangle="263, 489, 40, 40" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='main-content' innertext='ESTAGIARIO SUPERIOR 6HCalibrar PosiçãoAutomatizar fluxos de trabalho1059726CANAA DOS CARAJAS, PA, BRA110 Filled/ClosedPeoplesoft-ProdLeads718Contactados0Candidatos0Analyticsvisualizações : ImportadoDestaquesDiversidadePCDTodos os filtros5ResetarSalvar visualizaçãoGêneroRaçaBirth Region BrasilResidency Region BrasilLocalização1Qualificações/Palavras-chaveTítulo4Nível de senioridadeEmpresasExperiênciaEducaçãoFuncionário2Detalhes ATS2CampanhasOutras opções1Tipo de candidatoAvançar EstágioCompartilharContatarAg*' /&gt;&lt;webctrl tag='TABLE' idx='2' /&gt;&lt;webctrl aaname='AD' parentid='pipeline-table' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main-content' innertext='ESTAGIARIO SUPERIOR 6HCalibrar PosiçãoAutomatizar fluxos de trabalho1059726CANAA DOS CARAJAS, PA, BRA110 Filled/ClosedPeoplesoft-ProdLeads718Contactados0Candidatos0Analyticsvisualizações : ImportadoDestaquesDiversidadePCDTodos os filtros5ResetarSalvar visualizaçãoGêneroRaçaBirth Region BrasilResidency Region BrasilLocalização1Qualificações/Palavras-chaveTítulo4Nível de senioridadeEmpresasExperiênciaEducaçãoFuncionário2Detalhes ATS2CampanhasOutras opções1Tipo de candidatoAvançar EstágioCompartilharContatarAg*' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='AD' parentid='pipeline-table' type='' tag='DIV' class='wrapper-style_JQQTPqt avatar_Df78a8y image-style_ivVzJN7 round_TS9twpU violet-red_PRQsJ10' check:text='AD' /&gt;" Guid="c42d7a80-ab44-457d-9b45-70c0a1dab5fd" InformativeScreenshot="741ae9a282b1203b607d67ffe57adda6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO SUPERIOR 6H | Eightfold' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Click Candidate" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Performed click to select candidate&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Click Button 'Avançar Estágio'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="b5a31ace-a368-463b-aeaa-f143f322dd80" CvElementArea="256, 363, 172, 39" CvTextArea="267, 376, 123, 17" CvTextArgument="Avancar Estagio" CvType="Button" DesignTimeRectangle="269, 374, 120, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Avançar Estágio' innertext='Avançar Estágio' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avançar Estágio' innertext='Avançar Estágio' tag='SPAN' type='' class='button-text-medium_rDDGdtI' check:text='Avançar Estágio' /&gt;" Guid="7dde1b88-bbb0-4a30-b99c-8bbf8e6922b8" InformativeScreenshot="eb4277154eeb62d5b7f308147d38561b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="b5a31ace-a368-463b-aeaa-f143f322dd80" CvTextArea="267, 376, 123, 17" CvTextArgument="Avancar Estagio" CvType="Text" DesignTimeRectangle="257, 366, 170, 36" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-label='Advance Stage' aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Advance Stage' aria-role='button' tag='BUTTON' type='' class='button_ir66sw5 button-default_N1ZVdoL button-medium_wvT76RU pill-shape_mZOhtj3 icon-right_GP40qTP' aaname='Avançar Estágio' check:innerText='Avançar Estágio' /&gt;" Guid="ecee4f07-6cd7-4170-bc3b-38d09ca96196" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Click Button 'Avançar Estágio'" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Perfomed click button 'Avançar Estágio'&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Click Menu 'Integrity Check'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="16e724ac-57b0-402b-a706-fa3cd616327b" CvTextArea="272, 599, 111, 17" CvTextArgument="Integrity Check" CvType="Text" DesignTimeRectangle="272, 597, 184, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Integrity Check' innertext='Integrity Check' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Integrity Check' innertext='Integrity Check' tag='SPAN' type='' class='label_B_UVTu7' check:text='Integrity Check' /&gt;" Guid="b41d7174-45fe-48a5-ac77-83ac48766f43" InformativeScreenshot="3331aa494c5cdbc2c1f4265df409450a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Click Menu 'Integrity Check'" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Performed click menu 'Integrity Check'&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Click Button 'Confirmar'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8eeffd28-8766-4b2b-a1ba-d12f7e2d052c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://vale.eightfold.ai/position/pipeline_v2?pid=15779280&amp;workflow_id=leads&amp;step=imported" CVScreenId="9f8d671e-b26f-4886-aae3-242941adc937" CvElementArea="1095, 529, 131, 41" CvTextArea="1123, 541, 76, 15" CvTextArgument="Confirmar" CvType="Button" DesignTimeRectangle="1098, 532, 126, 36" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ats-confirm-button' tag='BUTTON' aaname='                 Confirmar               ' innertext='                 Confirmar               ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ats-confirm-button' tag='BUTTON' aaname='                 Confirmar               ' innertext='                 Confirmar               ' type='button' class='btn btn-primary btn-lg ats-confirm-button ' check:text='Confirmar' /&gt;" Guid="0312fae9-56e7-4ce5-86d2-ed74d0d436aa" InformativeScreenshot="642c9fd6d1b0e01618ef8c4900d11c29.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ESTAGIARIO*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Click Button 'Confirmar'" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Performed click button 'Confirmar'&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="edcb574948c6fd6c30617b408ca1279d.jpg" Selector="&lt;html app='chrome.exe' title='ESTAGIARIO SUPERIOR 6H | Eightfold' /&gt;" Title="ESTAGIARIO SUPERIOR 6H | Eightfold" Url="[in_Config(&quot;UrlSite1&quot;).ToString &amp; io_UrlPipeline]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
