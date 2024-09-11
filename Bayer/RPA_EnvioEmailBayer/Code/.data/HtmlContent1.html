@@ -1,0 +1,49 @@
+<HTML><HEAD>
+<STYLE type=text/css>
+        body {
+            font-family: Calibri;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .mapping {
+            background-color: #D3D4D7;
+            color: black;
+            padding: 1px;
+        }
+    </STYLE>
+<!-- Instruct the web browser control to use IE 6 to render the page. -->
+<META content=IE=6 http-equiv=X-UA-Compatible></HEAD>
+<BODY><FONT color=#a31515>
+<P><IMG class=runtime-img1 style="MARGIN: 0px" alt="" src="data:image/png;base64," width=250 height=250></P>
+<P>Olá, [NOME],</P>
+<P>&nbsp;&lt;br&gt;</P>
+<P>O seu talento nos inspirou e você está muito perto de ser a nova pessoa estagiária na Bayer!!! </P>
+<P>É notícia boa que você quer sobre o Programa de Estágio Bayer - agosto 2024? Viemos aqui para isso!!! Então, leia com atenção esse e-mail para que dê tudo certo, combinado?</P>
+<P>Pode comemorar, pois você foi APROVADO(A) para última etapa do processo, parabéns!! Nesse primeiro momento, queremos compartilhar com você todas as informações necessárias sobre a área que você foi direcionado(a). Vale reforçar que buscamos priorizar sua primeira ou segunda opção de área escolhida na inscrição, mas também consideramos outras áreas, caso tenha informado que aceita ser redirecionado(a).</P>
+<P>&lt;br&gt;</P>
+<P>- Localidade + Área: [AREA]</P>
+<P>- Divisão: [DIVISAO]</P>
+<P>- Área: [AREA INTERNA] </P>
+<P>- Descritivo da área: [DESCRITIVO DA AREA] </P>
+<P>- Atividades e Responsabilidades: [DESCRITIVO DAS ATIVIDADES] </P>
+<P>- Modelo de Trabalho: [Modelo de Trabalho] </P>
+<P>&lt;br&gt;</P>
+<P>Nos próximos dias, você receberá um outro e-mail com orientações sobre o agendamento para a etapa final, fique tranquilo(a) e aguarde! 😊</P>
+<P>&lt;br&gt;</P>
+<P>Recado Importante</P>
+<P>O time da Bayer preparou um vídeo incrível para você conhecer um pouco mais sobre a divisão de negócio e que vai te ajudar nessa etapa. </P>
+<P>Acesse o link do vídeo: [Link preparação divisão] </P>
+<P>&lt;br&gt;</P>
+<P>Convite Warm Up: </P>
+<P>E antes de finalizar, temos um convite muito especial para você, faremos um momento com líderes e o time de RH da Bayer para que você possa conhecer um pouco mais sobre a cultura, divisões e muitas dicas para essa última etapa. Esse momento não é obrigatório ou eliminatório, mas gostaríamos muito que você estivesse com a gente nesse momento, pois temos certeza de que contribuirá para sua jornada e seu desenvolvimento. </P>
+<P>&lt;br&gt;</P>
+<P>Data: 18/06/2024 as 13h30</P>
+<P>Link: </P>
+<P>&lt;br&gt;</P>
+<P>Um abraço,</P>
+<P>Bayer e Cia de Talentos</P>
+<P>Em caso de dúvida, não responda esse e-mail! O melhor jeito de falar conosco é acessando: https://www.ciadetalentos.com.br/empresas/pt/contato/ </P>
+<P>"</FONT>.Replace(<FONT color=#a31515>"[NOME]"</FONT>,CurrentRow(<FONT color=#a31515>"Nome"</FONT>).ToString).Replace(<FONT color=#a31515>"[AREA]"</FONT>,CurrentRow(<FONT color=#a31515>"Localidade + Área"</FONT>).ToString).Replace(<FONT color=#a31515>"[DIVISAO]"</FONT>,CurrentRow(<FONT color=#a31515>"Divisão de Negocios"</FONT>).ToString).Replace(<FONT color=#a31515>"[AREA INTERNA]"</FONT>,CurrentRow(<FONT color=#a31515>"Área Nomenclatura Bayer"</FONT>).ToString).Replace(<FONT color=#a31515>"[DESCRITIVO DA AREA]"</FONT>,CurrentRow(<FONT color=#a31515>"Descritivo Área"</FONT>).ToString).Replace(<FONT color=#a31515>"[DESCRITIVO DAS ATIVIDADES]"</FONT>,CurrentRow(<FONT color=#a31515>"Descritivo das atividades"</FONT>).ToString).Replace(<FONT color=#a31515>"[Modelo de Trabalho]"</FONT>,CurrentRow(<FONT color=#a31515>"Modelo de Trabalho"</FONT>).ToString)</P></BODY></HTML>
