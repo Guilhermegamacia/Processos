@@ -1,0 +1,1 @@
+"C:\Users\Guilherme\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" execute --file "C:\Processos\CiaTalentos\Bayer\RPA_EnvioCVPastaZip\Package\EnvioCV.1.0.1.nupkg"
