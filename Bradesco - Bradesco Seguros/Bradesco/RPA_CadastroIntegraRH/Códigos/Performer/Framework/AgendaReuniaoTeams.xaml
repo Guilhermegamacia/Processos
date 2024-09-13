@@ -1,0 +1,289 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AgendaReuniaoTeams" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_aDateStartTime" Type="InArgument(s:DateTimeOffset)" />
+    <x:Property Name="in_aDateEndTime" Type="InArgument(s:DateTimeOffset)" />
+    <x:Property Name="in_aStDescripcion" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStSubject" Type="InArgument(x:String)" />
+    <x:Property Name="in_aArrayStEmailDestinatario" Type="InArgument(s:String[])" />
+    <x:Property Name="out_aStMensagemTeams" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:AgendaReuniaoTeams.in_aDateStartTime>
+    <InArgument x:TypeArguments="s:DateTimeOffset" />
+  </this:AgendaReuniaoTeams.in_aDateStartTime>
+  <this:AgendaReuniaoTeams.in_aArrayStEmailDestinatario>
+    <InArgument x:TypeArguments="s:String[]" />
+  </this:AgendaReuniaoTeams.in_aArrayStEmailDestinatario>
+  <this:AgendaReuniaoTeams.out_aStMensagemTeams>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AgendaReuniaoTeams.out_aStMensagemTeams>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>897,500</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AgendaReuniaoTeams_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CE0843A2952_me_events_Create.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CE0843A2952_me_events_Create.Bundle</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>CE0843A2952_me_event.69rzU4JFRzG1o0CGl2H4hF93</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="576,1045" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="AgendaReuniaoTeams" sap:VirtualizedContainerService.HintSize="514,957" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="joinMeetingPasscode" />
+              <Variable x:TypeArguments="x:String" Name="onlineMeeting" />
+              <Variable x:TypeArguments="x:String" Name="Url" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <isactr:ConnectorActivity sap2010:Annotation.AnnotationText="Data precisa estar no modelo yyyy-MM-DD -hh:mm" Configuration="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" ConnectionId="f3106b85-9aad-4aa8-bb0d-3be0843a2952" DisplayName="Create Online Teams Meeting" sap:VirtualizedContainerService.HintSize="452,498" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="fea5f66a-0411-3cf7-a9a5-bfd4878cc497">
+              <isactr:ConnectorActivity.FieldObjects>
+                <isactr:FieldObject Name="subject" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String">[in_aStSubject]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="startDateTime" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="s:DateTimeOffset">[in_aDateStartTime]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="endDateTime" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="s:DateTimeOffset">[in_aDateEndTime]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="content" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String">[in_aStDescripcion]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="requiredAttendees_array" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="s:String[]">[in_aArrayStEmailDestinatario]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="optionalAttendees_array" Type="FieldArgument" />
+                <isactr:FieldObject Name="allowedPresenters" Type="FieldArgument" />
+                <isactr:FieldObject Name="allowMeetingChat" Type="FieldArgument" />
+                <isactr:FieldObject Name="lobbyBypassSettings_sub_scope" Type="FieldArgument" />
+                <isactr:FieldObject Name="allowAttendeeToEnableCamera" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="allowAttendeeToEnableMic" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="allowTeamworkReactions" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="isEntryExitAnnounced" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="recordAutomatically" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="lobbyBypassSettings_sub_isDialInBypassEnabled" Type="FieldArgument" />
+                <isactr:FieldObject Name="allowNewTimeProposals" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_joinMeetingIdSettings_sub_passcode" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String">[joinMeetingPasscode]</OutArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_joinMeetingIdSettings_sub_joinMeetingId" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String">[joinMeetingId]</OutArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="Jit_me_events" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:Object">[onlineMeeting]</OutArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_joinUrl" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String">[Url]</OutArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+              </isactr:ConnectorActivity.FieldObjects>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </isactr:ConnectorActivity>
+            <umab:CreateHtmlContent DisplayName="Create HTML Content - Define mensagem Teams" sap:VirtualizedContainerService.HintSize="452,184" HtmlContent="[out_aStMensagemTeams]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_1">
+              <umab:CreateHtmlContent.HtmlContentArg>
+                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                      <umabh:HtmlTextValueMapping Name="URL" Value="[Url]" />
+                      <umabh:HtmlTextValueMapping Name="Id" Value="[joinMeetingId]" />
+                      <umabh:HtmlTextValueMapping Name="Senha" Value="[joinMeetingPasscode]" />
+                    </scg:List>
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:CreateHtmlContent.HtmlContentArg>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umab:CreateHtmlContent>
+            <ui:LogMessage DisplayName="Log Message - Define mensagem Teams" sap:VirtualizedContainerService.HintSize="452,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;A mensagem do teams foi definida: &quot; &amp; out_aStMensagemTeams]" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

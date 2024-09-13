@@ -1,0 +1,1 @@
+"C:\Users\Guilherme\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" execute --file "C:\Processos\CiaTalentos\Bradesco - Bradesco Seguros\Bradesco\RPA_CadastroIntegraRH\Package\CadastroDeVagasIntegraRHBradesco_Performer.1.0.1.nupkg"

@@ -1,0 +1,544 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BuscarVaga" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_aTelaBrasdesco" Type="InOutArgument(ui:UiElement)" />
+    <x:Property Name="in_aStNome" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStSobrenome" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStEmail" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStTelefone" Type="InArgument(x:String)" />
+    <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_aStVagas" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:BuscarVaga.in_aStNome>
+    <InArgument x:TypeArguments="x:String" />
+  </this:BuscarVaga.in_aStNome>
+  <this:BuscarVaga.in_aStSobrenome>
+    <InArgument x:TypeArguments="x:String" />
+  </this:BuscarVaga.in_aStSobrenome>
+  <this:BuscarVaga.in_aStEmail>
+    <InArgument x:TypeArguments="x:String" />
+  </this:BuscarVaga.in_aStEmail>
+  <this:BuscarVaga.in_aStTelefone>
+    <InArgument x:TypeArguments="x:String" />
+  </this:BuscarVaga.in_aStTelefone>
+  <this:BuscarVaga.in_aStVagas>
+    <InArgument x:TypeArguments="x:String" />
+  </this:BuscarVaga.in_aStVagas>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>3313,3208</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>BuscarVaga_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>CE0843A2952_me_event.69rzU4JFRzG1o0CGl2H4hF93</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BuscarVaga" sap:VirtualizedContainerService.HintSize="1294,3143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="vStStIndisponibilidadeVaga" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Bradesco" sap:VirtualizedContainerService.HintSize="1232,3055" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_aTelaBrasdesco]" OpenMode="Never" OutUiElement="[io_aTelaBrasdesco]" ScopeGuid="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1198,2895" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo vaga" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1136,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Text="[in_aStVagas]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="126465a1-a9f9-40ff-993b-21a50a0868bf" CvElementArea="180, 348, 145, 20" CvType="InputBox" DesignTimeRectangle="181, 349, 143, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$txtReqId' aaname='ID de Sol.:' id='ctl00_ContentPlaceHolder1_txtReqId' /&gt;" FuzzySelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$txtReqId' aaname='ID de Sol.:' id='ctl00_ContentPlaceHolder1_txtReqId' tag='INPUT' type='text' class=' watermark_text' /&gt;" Guid="392c12fa-f36d-4f7e-861c-2b55f1e88ef5" InformativeScreenshot="66a7f2dff7209126f1be400b2f013c31.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência - Atinja seu Potencial: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message - Campo Vaga" sap:VirtualizedContainerService.HintSize="1136,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot; ID da Vaga inserido&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão Buscar" sap:VirtualizedContainerService.HintSize="1136,57" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="327, 195, 77, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Portal da Agência *' role='document' /&gt;&lt;ctrl name='Busca' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Portal da Agência *' role='document' /&gt;&lt;ctrl name='Busca' role='push button' automationid='' check:fulltext='Busca' /&gt;" Guid="6b45698e-fb9e-4f77-849f-a681928f924f" ImageBase64="" InformativeScreenshot="9fb1a0500540fe34d3d900d26189d726.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Portal da Agência*' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="357, 199, 37, 14" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Portal da Agência - Atinja seu Potencial: integra rh' role='document' /&gt;&lt;ctrl name='Busca' role='push button' /&gt;&lt;ctrl name='Busca' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Portal da Agência - Atinja seu Potencial: integra rh' role='document' /&gt;&lt;ctrl name='Busca' role='push button' /&gt;&lt;ctrl name='Busca' role='text' automationid='' check:text='Busca' /&gt;" Guid="05a71962-c38f-4af9-8ea2-913e1b1cb91d" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Input 'ID de Sol.'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" DesignTimeRectangle="181, 249, 143, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='ctl00$ContentPlaceHolder1$txtReqId' id='ctl00_ContentPlaceHolder1_txtReqId' /&gt;" FuzzySelectorArgument="&lt;webctrl name='ctl00$ContentPlaceHolder1$txtReqId' id='ctl00_ContentPlaceHolder1_txtReqId' tag='INPUT' type='text' class=' watermark_text watermark_text' aaname='ID de Sol.:' /&gt;" Guid="15214f69-d34e-4984-9913-e7e026587f65" ImageBase64="" InformativeScreenshot="514d0c07906f50d4bb4b42a13205c129.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência - Atinja seu Potencial: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão Buscar" sap:VirtualizedContainerService.HintSize="1136,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Realizado o clique no botão buscar&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NCheckState DisplayName="Check App State - Nenhuma requisição" sap:VirtualizedContainerService.HintSize="1136,2577" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="541,679" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:WorkbookApplication" Name="vWbArquivoExcel" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text - Nenhuma requisição" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" TextString="[vStStIndisponibilidadeVaga]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1" CVScreenId="b9aba78f-657c-4b46-b79d-f160199e2dce" CvTextArea="24, 380, 239, 12" CvType="AnyWordGroup" DesignTimeRectangle="25, 380, 237, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='1' tag='SPAN' aaname='                         Nenhuma requisição disponível no momento                     ' /&gt;" FuzzySelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='SPAN' class='FieldValue NoSearches' /&gt;" Guid="7cc4d9bf-d856-49f8-b59a-35c90aeb248a" ImageBase64="" InformativeScreenshot="f2145ccf87f6062089a1e3adf96bde74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <ui:LogMessage DisplayName="Log Message -  Nenhuma requisição" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Não existe nenhuma requisição disponivel para a vaga&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">[vStStIndisponibilidadeVaga]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MultipleAssign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogoutBradesco" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Bradesco\LogoutBradesco.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="ui:UiElement" x:Key="in_aTelaBradesco">[io_aTelaBrasdesco]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Throw DisplayName="Throw - Falha Requisição" Exception="[New Exception(&quot;Falha ao realizar busca de vaga.&quot;)]" sap:VirtualizedContainerService.HintSize="479,50" sap2010:WorkflowViewState.IdRef="Throw_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="541,2335" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A #'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="37447d7a-2259-47b0-83e6-7954b944b77b" CvElementArea="3400, 402, 29, 29" CvType="ArrowButton" DesignTimeRectangle="3402, 404, 26, 26" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='CsDropDownBtn' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='CsDropDownBtn' type='' tag='A' aaname='  ' /&gt;" Guid="26076049-52bf-4c0a-b7c4-358642f608e9" InformativeScreenshot="9f8524ddb86771080ec76ccb388de403.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="1" DisplayName="Click 'A #'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="d0081956-7b7c-41b3-92dc-7091f84f292c" CvTextArea="3265, 438, 99, 12" CvTextArgument="Enviar Candidato" CvType="Text" DesignTimeRectangle="3266, 438, 98, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Enviar Candidato' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Enviar Candidato' type='' tag='SPAN' class='' check:innerText='Enviar Candidato' /&gt;" Guid="675be50f-4213-4bd0-872b-727267b52440" InformativeScreenshot="4bd4f32e21c056364486179c8639f377.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência - Atinja seu Potencial: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo Nome" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Text="[in_aStNome]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="4b6da6f0-ac45-4f16-bc32-a22267651395" CvElementArea="609, 375, 260, 20" CvType="InputBox" DesignTimeRectangle="610, 376, 258, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' tag='FORM' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtFirstName' aaname='Primeiro Nome' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' tag='FORM' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtFirstName' aaname='Primeiro Nome' tag='INPUT' type='text' class='' /&gt;" Guid="d93fa647-de5e-46c4-9781-5c5a79127cb1" InformativeScreenshot="33f7fb6e2c1b9356e7ccc80f839dc5b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Campo Nome" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Inserido o dado no campo nome&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo Sobrenome" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Text="[in_aStSobrenome]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="c8bdba8d-e939-41a0-a1e7-62b02c64b294" CvElementArea="609, 413, 260, 20" CvType="InputBox" DesignTimeRectangle="610, 414, 258, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtLastName' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtLastName' aaname='Sobrenome' /&gt;" FuzzySelectorArgument="&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtLastName' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtLastName' aaname='Sobrenome' tag='INPUT' type='text' class='' /&gt;" Guid="ed2e7a84-e587-4db9-89d3-6f6d48651cc8" InformativeScreenshot="54cc8fa8b579c39a118183ee90b31ba0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="c8bdba8d-e939-41a0-a1e7-62b02c64b294" CvTextArea="491, 416, 71, 12" CvTextArgument="Sobrenome:" CvType="Text" DesignTimeRectangle="492, 416, 66, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Sobrenome' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Sobrenome' type='' tag='LABEL' class='' check:innerText='Sobrenome' /&gt;" Guid="1483173e-58f2-4ade-b2b4-6c151f389495" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Campo Sobrenome" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Inserido o dado no campo Sobrenome&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo Email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Text="[in_aStEmail]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="30a90cc3-51d2-4d45-969a-3d0b3ca5a0de" CvElementArea="609, 456, 260, 21" CvType="InputBox" DesignTimeRectangle="610, 457, 258, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtEmail' aaname='Endereço de E-mail' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtEmail' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtEmail' aaname='Endereço de E-mail' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtEmail' tag='INPUT' type='text' class='' /&gt;" Guid="f90674a6-32e0-41a2-90f3-0bbb3105c8e1" InformativeScreenshot="0fa6e8de5f927d396e629c36ce6b5b64.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="30a90cc3-51d2-4d45-969a-3d0b3ca5a0de" CvTextArea="491, 452, 112, 15" CvTextArgument="Endereco de E-mail" CvType="Text" DesignTimeRectangle="492, 452, 111, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Endereço de E-mail' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Endereço de E-mail' type='' tag='LABEL' class='' check:innerText='Endereço de E-mail' /&gt;" Guid="1d2d5772-71ec-4bae-91ee-d95fa1d67a4a" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Campo email" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Inserido o dado no campo email&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo Telefone" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Text="[in_aStTelefone]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="46064a93-beb5-4ff8-b806-5558dce8cd66" CvElementArea="609, 503, 261, 21" CvType="InputBox" DesignTimeRectangle="610, 505, 258, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtPhone' aaname='Número de Telefone' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtPhone' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtPhone' aaname='Número de Telefone' id='ctl00_ContentPlaceHolder1_ucSubmitApplicant_dlgMain_txtPhone' tag='INPUT' type='text' class='' /&gt;" Guid="2334cb8d-88d6-48b1-a1ea-0c573a602879" InformativeScreenshot="2d7503111321f5e6996acca04cd0508a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="46064a93-beb5-4ff8-b806-5558dce8cd66" CvTextArea="491, 499, 115, 13" CvTextArgument="Numero de Telefone" CvType="Text" DesignTimeRectangle="492, 500, 114, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Número de Telefone' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Número de Telefone' type='' tag='LABEL' class='' check:innerText='Número de Telefone' /&gt;" Guid="afb8315c-097e-41d3-bf75-6b82f09326e5" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Campo telefone" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Inserido o dado no campo Telefone&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Verificar Disponibilidade'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="508dae2e-7614-4304-bb02-3f518f6e7ac9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="6bf0d677-daa5-4dbe-9ab4-a7e2911d0c65" CvElementArea="731, 589, 140, 21" CvTextArea="739, 594, 124, 12" CvTextArgument="Verificar Disponibilidade" CvType="Button" DesignTimeRectangle="733, 619, 137, 18" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname='Verificar Disponibilidade' check:text='Verificar Disponibilidade' /&gt;" Guid="7c6bd2ec-125d-47fd-b8e2-7b4e1aa818e4" InformativeScreenshot="1e6fd088b9645a6c1bff3afaaddd1c6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Input 'Número de Telefone'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="dba61cca-14af-41cd-a8f0-9ac8e63f7160" CvElementArea="609, 501, 260, 21" CvType="InputBox" DesignTimeRectangle="610, 503, 258, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtPhone' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$ucSubmitApplicant$dlgMain$txtPhone' type='text' tag='INPUT' class='' aaname='Número de Telefone' /&gt;" Guid="8796623a-6689-4314-bfd8-f1c831d1a4f3" InformativeScreenshot="395793e16f7b8ca3980f90dcbb03b261.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="dba61cca-14af-41cd-a8f0-9ac8e63f7160" CvTextArea="491, 497, 115, 13" CvTextArgument="Numero de Telefone" CvType="Text" DesignTimeRectangle="492, 498, 114, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Número de Telefone' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl aaname='Número de Telefone' type='' tag='LABEL' class='' check:innerText='Número de Telefone' /&gt;" Guid="2adb44ff-ae34-4642-a02f-4c3ae769f080" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message - Clique no botão 'Verificar Disponibilidade'" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;Realizado clique no botão Verificar Disponibilidade&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,141" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MultipleAssign>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="3950d90a-29b8-45bc-b3b3-0b6b09ab660a" CvTextArea="24, 380, 239, 12" CvTextArgument="Nenhuma requisicao disponivel no momento" CvType="Text" DesignTimeRectangle="25, 380, 237, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='1' tag='SPAN' aaname='                         Nenhuma requisição disponível no momento                     ' /&gt;" FuzzySelectorArgument="&lt;webctrl class='Panel_content' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='SPAN' aaname='                         Nenhuma requisição disponível no momento                     ' class='FieldValue NoSearches' check:text='Nenhuma requisição disponível no momento' /&gt;" Guid="2d44ef9c-d2af-43f4-80a0-e28f1d908bc3" InformativeScreenshot="f2145ccf87f6062089a1e3adf96bde74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência - Atinja seu Potencial: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

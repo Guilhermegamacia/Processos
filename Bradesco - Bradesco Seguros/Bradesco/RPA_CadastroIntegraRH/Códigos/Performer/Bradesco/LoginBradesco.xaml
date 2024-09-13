@@ -1,0 +1,595 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginBradesco" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_vStTelaBradesco" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>3313,2501</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LoginBradesco_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoginBradesco" sap:VirtualizedContainerService.HintSize="1232,2436" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ss:SecureString" Name="vStPass" />
+      <Variable x:TypeArguments="x:String" Name="vStUser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CredentialPortal_Bradesco" CacheStrategy="None" DisplayName="Get Credential - Bradesco" FolderPath="Processos/CiaTalentos/Bradesco" sap:VirtualizedContainerService.HintSize="1170,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[vStPass]" Username="[vStUser]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Login de Candidatos - Admissão On-line" sap:VirtualizedContainerService.HintSize="1170,2125" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Always" OutUiElement="[out_vStTelaBradesco]" ScopeGuid="80089202-e179-4aed-b28e-139d9375532f" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1136,1876" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into  - Login usuário" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1074,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="80089202-e179-4aed-b28e-139d9375532f" Text="[vStUser]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="3f81d64a-3466-4146-9910-89a1a304bc52" CvElementArea="551, 395, 353, 43" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="2c0ea39d-09a4-4391-b707-45fbab688a4b" InformativeScreenshot="6dda697c03d078f979c02119b02ec3d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidatos *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="Input 'INPUT userNameBox'" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="044fab9c-174b-40c2-b730-6e0e34b4285a" CvElementArea="551, 442, 353, 42" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="5e59ec96-f9fb-4b30-8999-25985a77b998" InformativeScreenshot="44cb32d76fd70ff19abdc9780d084184.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message - Login usuário" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Usuário inserido no campo e-mail&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Login Senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1074,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="80089202-e179-4aed-b28e-139d9375532f" SecureText="[vStPass]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="4beac5d9-77e9-421a-9c83-339ec6431e72" CvElementArea="551, 498, 354, 43" CvType="InputBox" DesignTimeRectangle="553, 499, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='passWordBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passWordBox' tag='INPUT' type='password' class='input' placeholder='senha' aaname='' /&gt;" Guid="30d9c268-59f5-44f3-9faf-3ce4e29188e3" InformativeScreenshot="d60e1f154f995ab08099b09ad18c992a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="Input 'Input 'INPUT userNameBox''" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="0368587d-8ad3-4dcf-ad59-87a02a3e1150" ContentHash="U8IYvAb5zUyAp82l0Q1jrw" CvElementArea="551, 442, 353, 42" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="ee585860-e69c-4e84-8548-cf9a24d8fbb8" InformativeScreenshot="7a9a46495d2bc5f819c1e172dc176a13.png" Reference="Tj48eExQpUqQt_SRnoJOgQ/vFT1w_HRvEec6dOv18CU_g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidatos - Admissão On-line' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message - Login Senha" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Senha inserida no campo passWord&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click - Clique botão entrar" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="80089202-e179-4aed-b28e-139d9375532f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="4bad167d-d866-4af4-9e0c-750a42e01f26" CvElementArea="552, 563, 351, 36" CvTextArea="706, 574, 44, 13" CvTextArgument="Entrar" CvType="Button" DesignTimeRectangle="553, 564, 350, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Entrar' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Entrar' class='CsImageButton1' check:text='Entrar' /&gt;" Guid="348eebf8-68af-4f00-9dee-a5ddb11ae889" InformativeScreenshot="b14e5200ca06483324e1a5b46d32a2fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique botão entrar" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Clicando no botão entrar para fazer o acesso&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NCheckState DisplayName="Check App State - Falha Login" sap:VirtualizedContainerService.HintSize="1074,986" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="80089202-e179-4aed-b28e-139d9375532f" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MultipleAssign>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target not appear" sap:VirtualizedContainerService.HintSize="541,744" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="vStErroLogin" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text - Falha Login" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="80089202-e179-4aed-b28e-139d9375532f" TextString="[vStErroLogin]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp" CVScreenId="bf7786b2-158a-4d56-8b3a-444f2a20d607" CvTextArea="572, 461, 311, 13" CvType="AnyWordGroup" DesignTimeRectangle="511, 458, 434, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='DIV' aaname='Você inseriu credenciais de autenticação inválidas.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='' /&gt;" Guid="619b55af-4d9d-40a2-b33e-87916f422ab7" ImageBase64="" InformativeScreenshot="f26cdfc7eed8152144de03be93235966.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidato*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="a2f03e70-d8bf-4164-82d2-278b5fd1f3c9" CvTextArea="572, 461, 311, 16" CvTextArgument="Voce inseriu credenciais de autenticacao invalidas." CvType="Text" DesignTimeRectangle="572, 461, 311, 16" ElementType="Text" Guid="c04afd36-dcd3-41fe-83bf-c77352b11d84" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <ui:LogMessage DisplayName="Log Message -  Falha Login" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Erro ao tentar acessar o portal Bradesco&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">[vStErroLogin]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MultipleAssign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogoutBradesco" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Bradesco\LogoutBradesco.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="ui:UiElement" x:Key="in_aTelaBradesco">[out_vStTelaBradesco]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Throw DisplayName="Throw - Falha Login" Exception="[New Exception(&quot;Falha ao realizar login no site Bradesco.&quot;)]" sap:VirtualizedContainerService.HintSize="479,115" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="560470fe-d12d-4153-bcb3-569200e11b92" CvTextArea="23, 189, 114, 16" CvTextArgument="Portal da Agencia" CvType="Text" DesignTimeRectangle="24, 189, 112, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Portal da Agência' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Portal da Agência' tag='H2' type='' class='' check:text='Portal da Agência' /&gt;" Guid="dc7452f8-0a0d-4ff3-89a8-a2e4fa7649e7" InformativeScreenshot="c96e6c774d9cf84b71e7f896950e9fdb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência - Atinja seu Potencial: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 3456, 1408" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c4c9e9b7c544209b96feeba4b8b197c6.jpg" Selector="&lt;html app='chrome.exe' title='Login de Candidatos - Admissão On-line' /&gt;" Title="Login de Candidatos - Admissão On-line" Url="[io_Config(&quot;UrlSite&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1170,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Login de Candidatos - Admissão On-line" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" OutUiElement="[out_vStTelaBradesco]" ScopeGuid="596d67e9-572a-41ab-8ad3-bab250abc98a" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1136,1861" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="vStErroLogin" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into  - Login usuário" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1074,288" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="596d67e9-572a-41ab-8ad3-bab250abc98a" Text="[vStUser]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="3f81d64a-3466-4146-9910-89a1a304bc52" CvElementArea="551, 395, 353, 43" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="2c0ea39d-09a4-4391-b707-45fbab688a4b" InformativeScreenshot="6dda697c03d078f979c02119b02ec3d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidatos *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="Input 'INPUT userNameBox'" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="044fab9c-174b-40c2-b730-6e0e34b4285a" CvElementArea="551, 442, 353, 42" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="5e59ec96-f9fb-4b30-8999-25985a77b998" InformativeScreenshot="44cb32d76fd70ff19abdc9780d084184.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                        </uix:VerifyExecutionTypeIntoOptions.Target>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Login usuário" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Usuário inserido no campo e-mail&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Login Senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1074,288" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="596d67e9-572a-41ab-8ad3-bab250abc98a" SecureText="[vStPass]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="4beac5d9-77e9-421a-9c83-339ec6431e72" CvElementArea="551, 498, 354, 43" CvType="InputBox" DesignTimeRectangle="553, 499, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='passWordBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passWordBox' tag='INPUT' type='password' class='input' placeholder='senha' aaname='' /&gt;" Guid="30d9c268-59f5-44f3-9faf-3ce4e29188e3" InformativeScreenshot="d60e1f154f995ab08099b09ad18c992a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="Input 'Input 'INPUT userNameBox''" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="0368587d-8ad3-4dcf-ad59-87a02a3e1150" ContentHash="U8IYvAb5zUyAp82l0Q1jrw" CvElementArea="551, 442, 353, 42" CvType="InputBox" DesignTimeRectangle="553, 444, 351, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameBox' tag='INPUT' type='text' class='input' placeholder='e-mail' aaname='' /&gt;" Guid="ee585860-e69c-4e84-8548-cf9a24d8fbb8" InformativeScreenshot="7a9a46495d2bc5f819c1e172dc176a13.png" Reference="Tj48eExQpUqQt_SRnoJOgQ/vFT1w_HRvEec6dOv18CU_g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidatos - Admissão On-line' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                        </uix:VerifyExecutionTypeIntoOptions.Target>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message - Login Senha" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Senha inserida no campo passWord&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click - Clique botão entrar" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="596d67e9-572a-41ab-8ad3-bab250abc98a" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="4bad167d-d866-4af4-9e0c-750a42e01f26" CvElementArea="552, 563, 351, 36" CvTextArea="706, 574, 44, 13" CvTextArgument="Entrar" CvType="Button" DesignTimeRectangle="553, 564, 350, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Entrar' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Entrar' class='CsImageButton1' check:text='Entrar' /&gt;" Guid="348eebf8-68af-4f00-9dee-a5ddb11ae889" InformativeScreenshot="b14e5200ca06483324e1a5b46d32a2fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message - Clique botão entrar" sap:VirtualizedContainerService.HintSize="1074,57" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Clicando no botão entrar para fazer o acesso&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NCheckState DisplayName="Check App State - Falha Login" sap:VirtualizedContainerService.HintSize="1074,967" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="596d67e9-572a-41ab-8ad3-bab250abc98a" Timeout="10" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="541,723" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="vStErroLogin" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text - Falha Login" sap:VirtualizedContainerService.HintSize="479,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="596d67e9-572a-41ab-8ad3-bab250abc98a" TextString="[vStErroLogin]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp" CVScreenId="bf7786b2-158a-4d56-8b3a-444f2a20d607" CvTextArea="572, 461, 311, 13" CvType="AnyWordGroup" DesignTimeRectangle="511, 458, 434, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='DIV' aaname='Você inseriu credenciais de autenticação inválidas.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='' /&gt;" Guid="619b55af-4d9d-40a2-b33e-87916f422ab7" ImageBase64="" InformativeScreenshot="f26cdfc7eed8152144de03be93235966.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidato*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="a2f03e70-d8bf-4164-82d2-278b5fd1f3c9" CvTextArea="572, 461, 311, 16" CvTextArgument="Voce inseriu credenciais de autenticacao invalidas." CvType="Text" DesignTimeRectangle="572, 461, 311, 16" ElementType="Text" Guid="c04afd36-dcd3-41fe-83bf-c77352b11d84" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGetText>
+                        <ui:LogMessage DisplayName="Log Message -  Falha Login" sap:VirtualizedContainerService.HintSize="479,85" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Erro ao tentar acessar o portal Bradesco&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,242" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">["Falha"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_Config("Status_Candidato_Indisponivel")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">["Credenciais invalidas"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_Config("Status_erro_sistema")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[vStErroLogin]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_Config("Status_erro_ID_vaga")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">["Falha de Login"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:MultipleAssign>
+                        <Throw DisplayName="Throw - Falha Login" Exception="[New Exception(&quot;Falha ao realizar login no site Bradesco.&quot;)]" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Object">[io_Config("Status_Candidato_Indisponivel")]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Object">[io_Config("Status_erro_sistema")]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Object">[io_Config("Status_erro_ID_vaga")]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Object">[String.Empty]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MultipleAssign>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/login/render.aspx?id=defaultclp&amp;ReturnUrl=https%3a%2f%2fbradesco.csod.com%2fATS%2fAgencyPortal%2fMyJobs.aspx%3ftab_page_id%3d-20015911%26tab_id%3d-1%26t%3d0" CVScreenId="0084dc5f-8755-424e-a38d-0c031a9da27d" CvTextArea="1572, 740, 311, 13" CvTextArgument="Voce inseriu credenciais de autenticacao invalidas." CvType="Text" DesignTimeRectangle="1511, 737, 434, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='*' aaname='Você inseriu credenciais de autenticação inválidas.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='*' aaname='Você inseriu credenciais de autenticação inválidas.' type='' class='' check:text='Você inseriu credenciais de autenticação inválidas.' /&gt;" Guid="3adcf5bf-7c33-4af9-bee3-f4332a0e6ccd" InformativeScreenshot="5fc08b550efb4bd42eead80ca7fae076.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login de Candidatos*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-1448, -209, 1456, 868" BrowserType="Chrome" ContentHash="2q5xteZ7VEOfQh5I13MOWA" IconBase64="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" InformativeScreenshot="6a9b71875e64c481ca1fc807195258d8.jpg" Reference="Tj48eExQpUqQt_SRnoJOgQ/bo5WB2ofBUy-Q7RjvoUkZw" Selector="&lt;html app='chrome.exe' title='Login de Candidatos - Admissão On-line' /&gt;" Title="Login de Candidatos - Admissão On-line" Url="[io_Config(&quot;UrlSite&quot;).ToString]" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

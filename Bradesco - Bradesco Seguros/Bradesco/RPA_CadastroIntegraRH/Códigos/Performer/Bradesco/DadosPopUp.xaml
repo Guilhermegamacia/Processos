@@ -1,0 +1,689 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DadosPopUp" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_aTelaBradesco" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_vStCpf" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStCaminhoCv" Type="InArgument(x:String)" />
+    <x:Property Name="in_aStNomeArquivo" Type="InArgument(x:String)" />
+    <x:Property Name="out_aStSucesso" Type="InArgument(x:String)" />
+    <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <this:DadosPopUp.io_aTelaBradesco>
+    <InArgument x:TypeArguments="ui:UiElement" />
+  </this:DadosPopUp.io_aTelaBradesco>
+  <this:DadosPopUp.in_vStCpf>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DadosPopUp.in_vStCpf>
+  <this:DadosPopUp.in_aStCaminhoCv>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DadosPopUp.in_aStCaminhoCv>
+  <this:DadosPopUp.in_aStNomeArquivo>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DadosPopUp.in_aStNomeArquivo>
+  <this:DadosPopUp.out_aStSucesso>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DadosPopUp.out_aStSucesso>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>3313,7560</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DadosPopUp_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DadosPopUp" sap:VirtualizedContainerService.HintSize="1203,7495" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="vTelaBradesco" />
+      <Variable x:TypeArguments="x:String" Name="vStStEnvioIndiponivel" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Bradesco" sap:VirtualizedContainerService.HintSize="1141,1180" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_aTelaBradesco]" OpenMode="Never" OutUiElement="[io_aTelaBradesco]" ScopeGuid="b98b707b-3fa2-482b-a17e-a5b6b8b12c98" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1107,1011" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Indisponível para'" sap:VirtualizedContainerService.HintSize="1045,921" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b98b707b-3fa2-482b-a17e-a5b6b8b12c98" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="541,679" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:WorkbookApplication" Name="vWbArquivoExcel1" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text - Indisponível " sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b98b707b-3fa2-482b-a17e-a5b6b8b12c98" TextString="[vStStEnvioIndiponivel]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1" CVScreenId="1a579d6a-644b-4312-a1f8-7fdf122e298c" CvTextArea="696, 602, 211, 14" CvType="AnyWordGroup" DesignTimeRectangle="697, 602, 210, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl class='FieldValue' aaname='Indisponível para envio neste momento' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl class='FieldValue' tag='SPAN' type='' /&gt;" Guid="5599eb2a-3048-433d-bd71-021ecbb19a60" ImageBase64="" InformativeScreenshot="61e394a59ff31c7192a87b7bb4eb4b65.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <ui:LogMessage DisplayName="Log Message - Indisponível" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace" Message="[&quot;Não foi possível fazer o envio.&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">[vStStEnvioIndiponivel]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MultipleAssign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogoutBradesco" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Bradesco\LogoutBradesco.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="ui:UiElement" x:Key="in_aTelaBradesco">[io_aTelaBradesco]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Throw DisplayName="Throw - Falha Envio" Exception="[New Exception(&quot;Falha ao realizar envio.&quot;)]" sap:VirtualizedContainerService.HintSize="479,50" sap2010:WorkflowViewState.IdRef="Throw_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,483" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Enviar'" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b98b707b-3fa2-482b-a17e-a5b6b8b12c98" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="c15e0f14-78cd-4287-a658-770105edd9a1" CvElementArea="812, 588, 59, 24" CvTextArea="822, 593, 38, 12" CvTextArgument="Enviar" CvType="Button" DesignTimeRectangle="823, 589, 37, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div' id='ctl00_masterPageBody' /&gt;&lt;webctrl tableRow='1' tag='B' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl id='ctl00_masterPageBody' /&gt;&lt;webctrl type='' tag='B' class='' aaname='Enviar' check:text='Enviar' /&gt;" Guid="5f835b22-4964-4324-a4f5-7f492b2a6704" InformativeScreenshot="93a140d70fed9df37b3bf79f667a44be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Label 'Disponível para Envio'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1&amp;t=0" CVScreenId="cdf6d08b-0756-4b7e-a944-1aeb279b91be" CvTextArea="752, 559, 118, 15" CvTextArgument="Disponivel para Envio" CvType="Text" DesignTimeRectangle="753, 560, 117, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' idx='1' /&gt;&lt;webctrl class='FieldValue' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl class='FieldValue' type='' tag='SPAN' aaname='Disponível para Envio' check:text='Disponível para Envio' /&gt;" Guid="c0084819-2a16-48ab-ac07-194a90ca28b2" InformativeScreenshot="e7a3d4f524cdeb88382dc1525cbc9808.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message - Clique no botão 'Enviar'" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Realizado clique no botão Enviar&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/AgencyPortal/MyJobs.aspx?tab_page_id=-20015911&amp;tab_id=-1" CVScreenId="c1579fd4-f707-41d2-b8ed-fc93b49f8692" CvTextArea="696, 602, 211, 14" CvTextArgument="Indisponivel para envio neste momento" CvType="Text" DesignTimeRectangle="697, 602, 210, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl class='FieldValue' tableRow='1' tag='SPAN' aaname='Indisponível para envio neste momento' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='CsDialog_contentTable' tag='TABLE' /&gt;&lt;webctrl class='FieldValue' type='' tag='SPAN' aaname='Indisponível para envio neste momento' check:text='Indisponível para envio neste momento' /&gt;" Guid="dc2da80e-4abf-4405-9bd4-461f336e1cd0" InformativeScreenshot="61e394a59ff31c7192a87b7bb4eb4b65.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal da Agência*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome - Insere dados Pop-Up" sap:VirtualizedContainerService.HintSize="1141,6227" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,5987" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo CPF" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Text="[in_vStCpf]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://lax-prd-ex.csod.com/ise-rendering/?cn=YnJhZGVzY28=&amp;respondent=117c6dab-28e8-447c-8551-b9234e497f21&amp;cultureId=12&amp;product=PSQ&amp;redirect=aHR0cHM6Ly9icmFkZXNjby5jc29kLmNvbS9BVFMvQ2FyZWVyU2l0ZS9TZWxlY3Rpb25QcmVzY3JlZW5pbmdSZWRpcmVjdC5hc3B4" CVScreenId="ef47d98b-8b48-43fa-8b38-6b7a28c573b1" CvElementArea="349, 461, 241, 33" CvType="InputBox" DesignTimeRectangle="350, 462, 240, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl id='ctl00_ctl00_careerSiteContainer' /&gt;&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl id='ctl00_ctl00_careerSiteContainer' /&gt;&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' class='middle-field highlighted' aaname='' /&gt;" Guid="3af2dea8-96d7-476b-af5d-f94f7f9ee449" InformativeScreenshot="926bb4e38d7684faa791178fad11d835.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message - Campo CPF" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Inserido dados no campo CPF&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Enviar'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://lax-prd-ex.csod.com/ise-rendering/?cn=YnJhZGVzY28=&amp;respondent=117c6dab-28e8-447c-8551-b9234e497f21&amp;cultureId=12&amp;product=PSQ&amp;redirect=aHR0cHM6Ly9icmFkZXNjby5jc29kLmNvbS9BVFMvQ2FyZWVyU2l0ZS9TZWxlY3Rpb25QcmVzY3JlZW5pbmdSZWRpcmVjdC5hc3B4" CVScreenId="382ddaab-fb5d-4cf2-9998-58a7be8af206" CvElementArea="973, 510, 101, 41" CvTextArea="994, 521, 60, 19" CvTextArgument="Enviar" CvType="Button" DesignTimeRectangle="974, 512, 99, 38" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' type='button' class='next-button' aaname='Enviar' check:text='Enviar' /&gt;" Guid="386e6fa1-e01d-4f19-8a52-6908e4c3b088" InformativeScreenshot="b6cd919b73a6117c25bc7f2f4934527f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas: *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Input 'INPUT'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://lax-prd-ex.csod.com/ise-rendering/?cn=YnJhZGVzY28=&amp;respondent=117c6dab-28e8-447c-8551-b9234e497f21&amp;cultureId=12&amp;product=PSQ&amp;redirect=aHR0cHM6Ly9icmFkZXNjby5jc29kLmNvbS9BVFMvQ2FyZWVyU2l0ZS9TZWxlY3Rpb25QcmVzY3JlZW5pbmdSZWRpcmVjdC5hc3B4" CVScreenId="5a5b902e-b56b-47fc-a735-8a69cac44a70" CvElementArea="349, 263, 242, 32" CvType="InputBox" DesignTimeRectangle="350, 264, 240, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aspnetForm' name='aspnetForm' /&gt;&lt;webctrl id='ctl00_ctl00_siteContent_applicationContent_ifrSelection' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' class='middle-field highlighted' aaname='' /&gt;" Guid="3be86f07-a0fa-493c-9c8f-59aba07838c9" InformativeScreenshot="a531ad6d81e0c43c7ce73d630fad8e41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Enviar'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Realizado click no botão Enviar&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Carregar Currículo'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5elkMGrRuGPs5iECmvO75QnQ%3d%3d" CVScreenId="73de7564-f37b-437e-a513-9f019dba652b" CvTextArea="89, 363, 105, 15" CvTextArgument="Carregar Curriculo" CvType="Text" DesignTimeRectangle="90, 361, 104, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='text' tag='SPAN' aaname='Carregar Currículo' /&gt;" FuzzySelectorArgument="&lt;webctrl class='text' tag='SPAN' aaname='Carregar Currículo' type='' check:text='Carregar Currículo' /&gt;" Guid="c6a52ec1-1151-4b87-b0de-30e01fcf01d7" InformativeScreenshot="08a221f57038ffc0da01d43360a27a92.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resume' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Element 'Currículo'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable CVScreenId="2dbc6261-e3fb-4cbf-9bfe-dda052f39eff" CvTextArea="50, 350, 92, 19" CvTextArgument="Curriculo" CvType="Text" DesignTimeRectangle="51, 344, 1263, 30" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Currículo' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Currículo' role='grouping' automationid='' check:text='Currículo' /&gt;" Guid="cb443293-f6b7-4841-9f54-7be462ae99d2" InformativeScreenshot="55a60331a4ee66c4acf87232502447b8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Resume *' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V3" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Carregar Currículo'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Realizado clique no botão carregar currículo&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Caminho do Arquivo'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5en1gRJC2Xk1uZrnQfrY2vwA%3d%3d" CVScreenId="42589acd-a6c6-41fa-818c-0c001d336d3d" CvElementArea="1608, 745, 109, 23" CvTextArea="1618, 749, 262, 13" CvTextArgument="Escolher arquivo Nenhum arquivo escolhido" CvType="Button" DesignTimeRectangle="1610, 747, 270, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' id='ctl00_ctl00_siteContent_applicationContent_ucResumeFileUpload_dlgUploadPopup_fuAttachment' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='INPUT' id='ctl00_ctl00_siteContent_applicationContent_ucResumeFileUpload_dlgUploadPopup_fuAttachment' type='file' class='' aaname='' /&gt;" Guid="4688297d-23c4-4b89-8047-b2d9b28131d5" InformativeScreenshot="768067771aa094b7aa0acf5156ab901f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resume' /&gt;" SearchSteps="Selector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="42589acd-a6c6-41fa-818c-0c001d336d3d" CvTextArea="1488, 751, 121, 14" CvTextArgument="Caminho do Arquivo:" CvType="Text" DesignTimeRectangle="1441, 746, 168, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='FieldName' aaname='Caminho do Arquivo:' check:innerText='Caminho do Arquivo:' /&gt;" Guid="4985a3d4-d247-48f3-b0fb-4e2f99deb20b" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Escolher ficheiro'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="82c1341d-971d-41a8-a2b5-3b5eba824eb1" CvElementArea="560, 410, 107, 22" CvType="InputBox" DesignTimeRectangle="561, 411, 106, 20" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Escolher ficheiro: Nenhum ficheiro selecionado' role='cell' /&gt;&lt;ctrl name='Escolher ficheiro: Nenhum ficheiro selecionado' role='push button' /&gt;&lt;ctrl name='Escolher ficheiro' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Escolher ficheiro: Nenhum ficheiro selecionado' role='cell' /&gt;&lt;ctrl name='Escolher ficheiro: Nenhum ficheiro selecionado' role='push button' /&gt;&lt;ctrl name='Escolher ficheiro' role='push button' automationid='' check:text='Escolher ficheiro' /&gt;" Guid="f15f31b6-cfbf-4f0b-9803-d8cff407ed45" InformativeScreenshot="578c962ea26592c8d7299fda182bd23a.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Resume *' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Button 'Carregar Currículo'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable CVScreenId="f7b357a0-d49b-4dad-8b0e-3a7a2b345092" CvTextArea="89, 476, 105, 15" CvTextArgument="Carregar Curriculo" CvType="Text" DesignTimeRectangle="71, 474, 123, 18" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Adicionar  Carregar Currículo' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Adicionar  Carregar Currículo' role='push button' automationid='' check:text='Carregar Currículo' /&gt;" Guid="e47ac560-eb1d-45e6-976c-77547a58c411" InformativeScreenshot="82973d29e8dbd2627938b63eb374ce98.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Resume *' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="f7b357a0-d49b-4dad-8b0e-3a7a2b345092" CvTextArea="89, 476, 105, 15" CvTextArgument="Carregar Curriculo" CvType="Text" DesignTimeRectangle="90, 474, 104, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Adicionar  Carregar Currículo' role='push button' /&gt;&lt;ctrl name='Carregar Currículo' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Resume' role='document' /&gt;&lt;ctrl name='Adicionar  Carregar Currículo' role='push button' /&gt;&lt;ctrl name='Carregar Currículo' role='text' automationid='' check:text='Carregar Currículo' /&gt;" Guid="702c090e-5dcd-4ca1-b7c0-d02f62384451" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Double" DelayBefore="4" DisplayName="Click 'Locais Anteriores'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="84e6a7fa-6e6e-43f8-a805-c2fa67e51b29" CvElementArea="145, 41, 821, 34" CvType="InputBox" DesignTimeRectangle="891, 41, 37, 37" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Carregando' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='Faixa de endereços' /&gt;&lt;ctrl name='Faixa de endereços' role='tool bar' /&gt;&lt;ctrl name='Locais Anteriores' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Carregando' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='Faixa de endereços' /&gt;&lt;ctrl name='Faixa de endereços' role='tool bar' /&gt;&lt;ctrl name='Locais Anteriores' role='push button' automationid='' check:text='Locais Anteriores' /&gt;" Guid="beb9e8a3-b67a-4f95-bc60-c39f0b756907" InformativeScreenshot="1781c50882695b28d9a684a535845b54.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="479,167" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_aStCaminhoCv]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="639a1321-4995-42db-b8d9-01aa91ea6a42">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,365" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo caminho arquivo" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,277" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Text="[in_aStCaminhoCv]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="85222596-c918-4f83-a881-eb231885c2bd" CvElementArea="144, 40, 235, 35" CvType="InputBox" DesignTimeRectangle="146, 41, 745, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1' title='*Abrir' /&gt;&lt;nav up='1' /&gt;&lt;wnd aaname='Carregando' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Carregando' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;" Guid="8cccb498-ead5-4f62-ab64-449d7a0ac352" InformativeScreenshot="785270c28b1b1d424235a0d8a48ff9fb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="920, 26, 42, 30" Guid="50a25651-ab5b-4c84-84c5-f8c055494f8f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAeCAYAAABaKIzgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVFhH7dVBCQYhEIbhreHNmw0sYgIbmMAEJtAgJtAEJrCBCWZxbj/sHn6YPQjf4QURBh714KW1phMCVDpApbuUUnRCgEoHqHSASgeodOdAnXN0Qnh66QCVDlDpAJUOUOkA3e0/upRCtVZqrfHaWsullB5n3voMmnOmtRaDvPeMjjHSnJPhvffHubc+gW7cGIOMMT/7+yZDCHyA/6CKbkC9p+xQZgnVAAAAAElFTkSuQmCC" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:LogMessage DisplayName="Log Message - Campo caminho arquivo" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Caminho arquivo inserido&quot;]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo nome arquivo" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Text="[in_aStNomeArquivo]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="578837dd-0e9e-4fc1-863a-7c0430bce9ed" CvElementArea="178, 404, 281, 26" CvType="InputBox" DesignTimeRectangle="183, 410, 255, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="ccce60e7-28a8-4083-8ab6-88279c171d74" InformativeScreenshot="054307b48b846ee2420867b337cf9d5a.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Nome arquivo inserido&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no Botão 'Abrir'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="f5fc7566-8166-4ddc-b4f2-b5b83ef479c7" CvElementArea="470, 434, 89, 26" CvTextArea="499, 440, 29, 12" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="470, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="b01b3b2c-ced0-4c19-8a73-023248194dc1" InformativeScreenshot="df02ed8dc8f1fee97c4d9c221c19f03e.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no Botão 'Abrir'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;Realizado clique no botão Abrir&quot;]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Campo Titulo" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Text="[in_aStNomeArquivo]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5eS6Bwswu%2frken70A91ZGwxw%3d%3d" CVScreenId="d0952609-419e-4c49-8c89-f012d3094745" CvElementArea="605, 450, 277, 26" CvType="InputBox" DesignTimeRectangle="607, 451, 274, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' id='ctl00_ctl00_siteContent_applicationContent_ucResumeFileUpload_dlgUploadPopup_txtUploadTitle' name='ctl00$ctl00$siteContent$applicationContent$ucResumeFileUpload$dlgUploadPopup$txtUploadTitle' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' id='ctl00_ctl00_siteContent_applicationContent_ucResumeFileUpload_dlgUploadPopup_txtUploadTitle' name='ctl00$ctl00$siteContent$applicationContent$ucResumeFileUpload$dlgUploadPopup$txtUploadTitle' class='' aaname='' /&gt;" Guid="36b5a5c6-090d-4887-8b73-9f2e12d50cad" InformativeScreenshot="127557a995774166a7cf6ca88de73a53.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resume' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d0952609-419e-4c49-8c89-f012d3094745" CvTextArea="567, 457, 38, 12" CvTextArgument="Titulo:" CvType="Text" DesignTimeRectangle="441, 450, 165, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='FieldName' aaname='Título:' check:innerText='Título:' /&gt;" Guid="f256b77f-324d-4f7b-863d-d8b7c64f324d" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message  - Campo titulo" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Inserido  nome do arquivo&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Carregar'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5eS6Bwswu%2frken70A91ZGwxw%3d%3d" CVScreenId="db60a350-739a-482b-9cdb-81366c4abb57" CvElementArea="874, 525, 71, 25" CvTextArea="884, 531, 50, 15" CvTextArgument="Carregar" CvType="Button" DesignTimeRectangle="885, 526, 49, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='CsDialog_contentTable' idx='2' /&gt;&lt;webctrl tableRow='1' tag='B' aaname='Carregar' /&gt;" FuzzySelectorArgument="&lt;webctrl class='CsDialog_contentTable' /&gt;&lt;webctrl type='' tag='B' aaname='Carregar' class='' check:text='Carregar' /&gt;" Guid="bbb882fe-b4d0-47c1-946d-4bb0ad6b5998" InformativeScreenshot="b936686870f88e15b191e7327d2456e1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resume' /&gt;" SearchSteps="Selector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Input 'Título'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5eS6Bwswu%2frken70A91ZGwxw%3d%3d" CVScreenId="e463b33f-ba12-42cc-8a78-39f24c16c5c6" CvElementArea="606, 450, 277, 25" CvType="InputBox" DesignTimeRectangle="607, 451, 274, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' rowName='Título:' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' rowName='Título:' class='' aaname='' /&gt;" Guid="c232d799-812a-42d3-ac38-d30f5dd7c207" InformativeScreenshot="42ff3bd6477ece09904508be01eebb16.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resume' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="e463b33f-ba12-42cc-8a78-39f24c16c5c6" CvTextArea="567, 457, 39, 12" CvTextArgument="Titulo:" CvType="Text" DesignTimeRectangle="441, 450, 165, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='FieldName' aaname='Título:' check:innerText='Título:' /&gt;" Guid="6a9c595b-6e5c-442a-b84e-2b378eaf82d1" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Carregar'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Realizado clique no botão carregar&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click - Clique no botão 'Avançar'" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Resume.aspx?s=%5e%5e%5eS6Bwswu%2frken70A91ZGwxw%3d%3d" CVScreenId="91a85b56-9741-4ce4-ad21-22df4e289f4c" CvElementArea="1338, 799, 77, 25" CvTextArea="1347, 805, 57, 15" CvTextArgument="Avancar &gt;&gt;" CvType="Button" DesignTimeRectangle="1349, 800, 55, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Avançar »' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avançar »' tag='B' type='' class='' check:text='Avançar »' /&gt;" Guid="b50d7d53-fc1c-4f0f-8126-7688dae2d4af" InformativeScreenshot="82fcba599024dc1a1e254a75704245f4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Currículo da Candidatura*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Avançar'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Realizado clique no botão avançar&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Eu entendo'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/ResumeReview.aspx?s=%5e%5e%5eHOv7DjUMqffhhaLeAxPyFw%3d%3d" CVScreenId="6823e6ab-5617-4da0-8a95-f6a80f8eae6d" CvElementArea="59, 717, 21, 21" CvType="CheckBox" DesignTimeRectangle="63, 721, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' aaname='Eu entendo que selecionar Avançar salva meu Currículo' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' aaname='Eu entendo que selecionar Avançar salva meu Currículo' class='' /&gt;" Guid="f5bf9d62-8991-4d7a-8347-dfd482714e7b" InformativeScreenshot="60b4c4756dc2cdc313d89553e8f7897b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="6823e6ab-5617-4da0-8a95-f6a80f8eae6d" CvTextArea="82, 721, 290, 12" CvTextArgument="Eu entendo que selecionar Avancar salva meu Curriculo" CvType="Text" DesignTimeRectangle="79, 719, 293, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Eu entendo que selecionar Avançar salva meu Currículo' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Eu entendo que selecionar Avançar salva meu Currículo' tag='LABEL' type='' class='' check:innerText='Eu entendo que selecionar Avançar salva meu Currículo' /&gt;" Guid="55c84992-f9f6-48da-a495-445e9c3046ce" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Eu entendo'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Realizado clique no check da validação de informação&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click - Clique no botão 'Avançar'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/ResumeReview.aspx?s=%5e%5e%5eHOv7DjUMqffhhaLeAxPyFw%3d%3d" CVScreenId="bcf99863-a17a-46f4-adbc-d8dbe812af21" CvElementArea="1321, 815, 77, 25" CvTextArea="1330, 821, 57, 15" CvTextArgument="Avancar &gt;&gt;" CvType="Button" DesignTimeRectangle="1332, 816, 55, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Avançar »' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avançar »' tag='B' type='' class='' check:text='Avançar »' /&gt;" Guid="f5388996-48f7-4afe-ae2b-f96021508020" InformativeScreenshot="332b9e3255cd5895f2751cc4c59415a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Checkbox 'Eu entendo'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/ResumeReview.aspx?s=%5e%5e%5eHOv7DjUMqffhhaLeAxPyFw%3d%3d" CVScreenId="2b316442-9279-4af3-9a91-5bae69505292" CvElementArea="59, 717, 21, 20" CvType="CheckBox" DesignTimeRectangle="63, 721, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' aaname='Eu entendo que selecionar Avançar salva meu Currículo' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' aaname='Eu entendo que selecionar Avançar salva meu Currículo' class='' /&gt;" Guid="5c4c83d8-bb30-4e3a-b043-4119e8d80c21" InformativeScreenshot="85ecb9a36218772982a7483dbc326f8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Capacitando Pessoas: integra rh' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="2b316442-9279-4af3-9a91-5bae69505292" CvTextArea="82, 721, 290, 12" CvTextArgument="Eu entendo que selecionar Avancar salva meu Curriculo" CvType="Text" DesignTimeRectangle="79, 719, 293, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Eu entendo que selecionar Avançar salva meu Currículo' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Eu entendo que selecionar Avançar salva meu Currículo' tag='LABEL' type='' class='' check:innerText='Eu entendo que selecionar Avançar salva meu Currículo' /&gt;" Guid="04462f64-390c-4da7-be41-f21493696ce4" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message - Clique no botão 'Avançar'" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Realizado Clique no botão avançar&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Clique no botão 'Enviar Candidatura'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3509351-da5a-4008-9a0f-f2330871c41f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bradesco.csod.com/ATS/CareerSite/Submit.aspx?s=%5e%5e%5egDZEhZVOz%2b4Nh1v2oh4%2fzQ%3d%3d" CVScreenId="ea3a8fbb-2f8c-4b92-86a6-9ae937690cc3" CvElementArea="49, 348, 129, 25" CvTextArea="60, 355, 108, 12" CvTextArgument="Enviar Candidatura" CvType="Button" DesignTimeRectangle="61, 350, 107, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Enviar Candidatura' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Enviar Candidatura' tag='B' type='' class='' check:text='Enviar Candidatura' /&gt;" Guid="16a65772-350d-4b39-be29-9d48a3a5c218" InformativeScreenshot="3c05db015c764e3375b0ebe7c5a39308.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enviar Candidatura *' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - Fechando PopUp" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="f4" KeyModifiers="Alt" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0affe0d-0a37-46b8-8bb9-16f55c5ec241" InformativeScreenshot="e89bc4cc8e9cffd22e475122bdd8d636" Selector="&lt;webctrl tag='HTML' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Trace" Message="[&quot;Realizado comando para fechar PopUp&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:MultipleAssign DisplayName="Multiple Assign - Define erros" sap:VirtualizedContainerService.HintSize="479,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Object">[io_Config("Status_ok")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Object">["Sucesso"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <Assign DisplayName="Assign - Define mensagem de sucesso" sap:VirtualizedContainerService.HintSize="479,107" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_aStSucesso]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Sucesso</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="10, 10, 816, 673" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGGSURBVDhPY6A64OHjk0zLyjvQM3H61+lzF/8DYRAbJAaSgyrDDqxs7AsnTpv7a9aCZf+BGv+2dPQ9r2/pfDRz/tJ/IDGQHEgNVDkqAEkAFf2bOnvRH1cPr1omJiZmkLi6ppYDSDMS/odhCMhpk6bP/T119sI/YuIS6lBhhtCImJ7uidOeoRkAdgmKd0D+A0mAbIYKMSgqKZuia0TGID1QpQwMwED6BvIzzNkgoK6hZd/Y1n0VhKfNXvgd3QBQwEKVMjCAQhoUYFAuBgDatgJZ85RZC36C9EClIQYgKwCG+p+27gl3fQOC60Gu4uPnFw8Oi+yIT0qbY2JmEQqyDMUAkBeQDUDGltZ2cVBlYAAyEORdFC/AAhEbjk1ImQlVBgaggAaJowQiLBqRNcYlpc52dHHL1tDSdoIqYwBFMSidYEQjCMASEswAY1PzYKgU2Nkgm0GaQWpwp0Zb+yJYUp4ya/7vpvaep9AA+wsSw5uUYQDkNJD/QIEECmkQBrFBYhjOphwwMAAA+3pGMrcB78kAAAAASUVORK5CYII=" InformativeScreenshot="a971b93da9fa01a80d31b2b2723e77c0.jpg" Selector="&lt;html app='chrome.exe' title='Capacitando Pessoas: integra rh' /&gt;" Title="Capacitando Pessoas: integra rh" Url="[io_Config(&quot;UrlPopUp&quot;). ToString]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
