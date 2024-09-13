@@ -1,0 +1,1 @@
+"C:\Users\Guilherme\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" execute --file "C:\Users\Guilherme\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" execute --file 
