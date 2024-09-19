@@ -1,0 +1,1317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="3313,5663" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Implementation</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="706,5598" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="vDtOriginalEntrevista" />
+      <Variable x:TypeArguments="sd:DataTable" Name="vDtAgendamentos" />
+      <Variable x:TypeArguments="x:String" Name="vStDiaAtual" />
+      <Variable x:TypeArguments="sd:DataTable" Name="vDtLinksSharepoint" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="wbAgendamentos" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="wbEntrevistas" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="wbLinksSharepoint" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out - Outlook Bayer Funcionando" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="592,1031" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <umab:OutlookApplicationCard Account="estagiobayer@ciadetalentos.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App - " sap:VirtualizedContainerService.HintSize="530,943" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+            <umab:OutlookApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Sequence Outlook" sap:VirtualizedContainerService.HintSize="496,735" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="s:DateTime" Name="vDateReuniao" />
+                    <Variable x:TypeArguments="x:String" Name="vStdataEvento" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:SendCalendarInviteX EndDate="{x:Null}" OptionalAttendees="{x:Null}" Account="[Outlook]" AlertInterval="00:15:00" AllDayEvent="False" BusyStatus="Busy" DailyRecurrenceStep="1" DailyRecurrenceType="EveryWeekDay" Description="Teste" DisplayName="Send Calendar Invite - Envio de Invite" Duration="00:40:00" sap:VirtualizedContainerService.HintSize="434,647" sap2010:WorkflowViewState.IdRef="SendCalendarInviteX_2" IsRecurring="False" Location="[Outlook.SelectedAccount]" MaxBodyDocumentSizeMB="2" MonthlyRecurrenceDay="Day" MonthlyRecurrenceDayIndex="1" MonthlyRecurrenceStep="1" MonthlyRecurrenceType="EveryNthDayOnEveryXthMonth" MonthlyRecurrenceWeek="First" RecurrenceEndType="NoEndDate" RecurrencePatternType="Daily" RecurrenceTotalOccurrences="1" RequiredAttendees="gustavo.mouco@klautomation.com.br" SaveWithoutSending="False" StartDate="2024-06-07" StartTime="06/07/2024 15:00:00" Subject="Teste" WeeklyRecurrenceDays="None" WeeklyRecurrenceStep="1" YearlyRecurrenceDay="Day" YearlyRecurrenceDayIndex="1" YearlyRecurrenceMonth="January" YearlyRecurrenceStep="1" YearlyRecurrenceType="EveryNthDayOfMonth" YearlyRecurrenceWeek="First">
+                    <umab:SendCalendarInviteX.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </umab:SendCalendarInviteX.Files>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umab:SendCalendarInviteX>
+                </Sequence>
+              </ActivityAction>
+            </umab:OutlookApplicationCard.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </umab:OutlookApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Agendamento" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[wbAgendamentos]" WorkbookPath="C:\Processos\CiaTalentos\Cargill\Discovery\Entrads_Perofomer_Cargil\Resumo Agendamentos ENTREVISTAS 2.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[vDtAgendamentos]" DisplayName="Read Range - Resumo de Agendamentos" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Resumo de Agendamentos" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <ui:ExcelCloseWorkbook DisplayName="Close Workbook - Agendamentos" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[wbAgendamentos]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelCloseWorkbook>
+    <ui:LogMessage DisplayName="Log Message - agendamento" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Realizou leitura da planilha de agendamentos&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Entrevistas" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Workbook="[wbEntrevistas]" WorkbookPath="C:\Processos\CiaTalentos\Cargill\Discovery\Entrads_Perofomer_Cargil\Planilha Modelo 1.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[vDtOriginalEntrevista]" DisplayName="Read Range - Entrevista" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Entrevista" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <ui:ExcelCloseWorkbook DisplayName="Close Workbook - Entrevistas" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_2" Workbook="[wbEntrevistas]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelCloseWorkbook>
+    <ui:LogMessage DisplayName="Log Message - entrevista" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Realizou leitura da planilha de entrevista&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Planilha Links Sharepoint" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" Workbook="[wbLinksSharepoint]" WorkbookPath="C:\Processos\CiaTalentos\Cargill\Discovery\Entrads_Perofomer_Cargil\LinksSharepoint.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_46">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[vDtLinksSharepoint]" DisplayName="Read Range - Links Sharepoint" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1" SheetName="Plan1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <ui:ExcelCloseWorkbook DisplayName="Close Workbook - Agendamentos" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_3" Workbook="[wbLinksSharepoint]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelCloseWorkbook>
+    <ui:LogMessage DisplayName="Log Message - linkSharepoint" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Realizou leitura da planilha de LinkSharepoint&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Assign DisplayName="Assign - Define dia atual" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[vStDiaAtual]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("dddd", New System.Globalization.CultureInfo("pt-BR"))]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message - Define dia atual" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Foi definido o dia atual: &quot; &amp; vStDiaAtual]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <If Condition="[vStDiaAtual.ToString.ToUpper.Contains(&quot;QUI&quot;) or vStDiaAtual.ToString.ToUpper.Contains(&quot;SEX&quot;)]" DisplayName="If - Valida Quinta ou Sexta feira" sap:VirtualizedContainerService.HintSize="644,882" sap2010:WorkflowViewState.IdRef="If_13">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,356" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:FilterDataTable DataTable="[vDtOriginalEntrevista]" DisplayName="Filter Data Table - Data Envio (Quinta ou Sexta)" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[vDtOriginalEntrevista]" SelectColumnsMode="Remove">
+            <ui:FilterDataTable.Filters>
+              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">["Data do evento"]</InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">[Now.AddDays(4).ToString("MM/dd/yyyy")]</InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+              </scg:List>
+            </ui:FilterDataTable.Filters>
+            <ui:FilterDataTable.SelectColumns>
+              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                <x:Null />
+              </scg:List>
+            </ui:FilterDataTable.SelectColumns>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:FilterDataTable>
+          <ui:LogMessage DisplayName="Log Message - Data Envio (Quinta ou Sexta)" sap:VirtualizedContainerService.HintSize="354,75" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Filtro realizado para quinta ou sexta.&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,356" sap2010:WorkflowViewState.IdRef="Sequence_45">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:FilterDataTable DataTable="[vDtOriginalEntrevista]" DisplayName="Filter Data Table - Data Envio (Segunda Terca ou Quarta)" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[vDtOriginalEntrevista]" SelectColumnsMode="Remove">
+            <ui:FilterDataTable.Filters>
+              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">["Data do evento"]</InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">[Now.AddDays(1).ToString("MM/dd/yyyy")]</InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+              </scg:List>
+            </ui:FilterDataTable.Filters>
+            <ui:FilterDataTable.SelectColumns>
+              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                <x:Null />
+              </scg:List>
+            </ui:FilterDataTable.SelectColumns>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:FilterDataTable>
+          <ui:LogMessage DisplayName="Log Message - Data Envio(Segunda Terca ou Quarta)" sap:VirtualizedContainerService.HintSize="354,75" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Filtro realizado para segunda terca ou quarta..&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="LinkSharepoint" DataTable="[vDtOriginalEntrevista]" DisplayName="Add Data Column - Link Sharepoint" sap:VirtualizedContainerService.HintSize="644,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:AddDataColumn>
+    <ui:LogMessage DisplayName="Log Message -  Link Sharepoint" sap:VirtualizedContainerService.HintSize="644,84" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Foi adicionado a coluna link Sharepoint&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[vDtOriginalEntrevista]" DisplayName="For Each Row in Data Table - define Link para cada gestor" sap:VirtualizedContainerService.HintSize="644,755" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,559" sap2010:WorkflowViewState.IdRef="Sequence_47">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="vDtAuxLinksSharepoint" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FilterDataTable DataTable="[vDtLinksSharepoint]" DisplayName="Filter Data Table - Nome gestor" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[vDtAuxLinksSharepoint]" SelectColumnsMode="Remove">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["Nome"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow("Nome Gestor").ToString.Trim]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <x:Null />
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <Assign DisplayName="Assign - Define link para gestor" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Object">[CurrentRow("LinkSharepoint")]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Object">[vDtAuxLinksSharepoint.Rows(0).Item("Link")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message - Gestor e Link" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[String.Format(&quot;Foi definido para o gestor {0}, o link sharepoint {1}&quot;, CurrentRow(&quot;Nome Gestor&quot;).ToString,vDtAuxLinksSharepoint.Rows(0).Item(&quot;Link&quot;))]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[vDtOriginalEntrevista]" DisplayName="For Each Row in Data Table - Original Entrevista" sap:VirtualizedContainerService.HintSize="644,2488" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="610,2292" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="vDtHorarios" />
+              <Variable x:TypeArguments="x:String" Name="vStBody" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FilterDataTable DataTable="[vDtAgendamentos]" DisplayName="Filter Data Table - Agendamentos" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="548,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[vDtHorarios]" SelectColumnsMode="Remove">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["SALA"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow("Nome Gestor").ToString]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <x:Null />
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:FilterDataTable>
+            <If Condition="[vDtHorarios.RowCount = 1]" DisplayName="If - 1 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 1" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem? 
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 2]" DisplayName="If - 2 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 2" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 3]" DisplayName="If - 3 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 3" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 4]" DisplayName="If - 4 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 4" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 5]" DisplayName="If - 5 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 5" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 6]" DisplayName="If - 6 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 6" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 7]" DisplayName="If - 7 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 7" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_19">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 8]" DisplayName="If - 8 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_15">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 8" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+#HORARIO8#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO8#",vDtHorarios.Rows(7).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 9]" DisplayName="If - 9 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 9" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_21">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+#HORARIO8#
+#HORARIO9#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO8#",vDtHorarios.Rows(7).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO9#",vDtHorarios.Rows(8).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 10]" DisplayName="If - 10 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 10" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_22">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+#HORARIO8#
+#HORARIO9#
+#HORARIO10#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO8#",vDtHorarios.Rows(7).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO9#",vDtHorarios.Rows(8).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO10#",vDtHorarios.Rows(9).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 11]" DisplayName="If - 11 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 11" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_23">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+#HORARIO8#
+#HORARIO9#
+#HORARIO10#
+#HORARIO11#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO8#",vDtHorarios.Rows(7).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO9#",vDtHorarios.Rows(8).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO10#",vDtHorarios.Rows(9).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO11#",vDtHorarios.Rows(10).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[vDtHorarios.RowCount = 12]" DisplayName="If - 12 horario" sap:VirtualizedContainerService.HintSize="548,84" sap2010:WorkflowViewState.IdRef="If_19">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Define Body 12" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_24">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vStBody]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Olá, gestor (a)! Tudo bem?
+ 
+Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.
+Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:
+#LINK#
+Para acessar a sala no dia do evento, clique em:
+#REUNIAO#
+
+O(s) horário(s) do(s) evento(s) será(ão):
+#HORARIO1#
+#HORARIO2#
+#HORARIO3#
+#HORARIO4#
+#HORARIO5#
+#HORARIO6#
+#HORARIO7#
+#HORARIO8#
+#HORARIO9#
+#HORARIO10#
+#HORARIO11#
+#HORARIO12#
+
+Lembrando que acima está sendo considerado o horário de Brasília.
+Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.
+ 
+Seguimos à disposição, caso tenha dúvidas.
+".Replace("#LINK#",CurrentRow("LinkSharepoint").ToString).Replace("#REUNIAO#",CurrentRow("Link gerado").ToString).Replace("#HORARIO1#",vDtHorarios.Rows(0).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO2#",vDtHorarios.Rows(1).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO3#",vDtHorarios.Rows(2).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO4#",vDtHorarios.Rows(3).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO5#",vDtHorarios.Rows(4).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO6#",vDtHorarios.Rows(5).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO7#",vDtHorarios.Rows(6).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO8#",vDtHorarios.Rows(7).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO9#",vDtHorarios.Rows(8).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO10#",vDtHorarios.Rows(9).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO11#",vDtHorarios.Rows(10).Item("SIGLA + HORÁRIO").ToString).Replace("#HORARIO12#",vDtHorarios.Rows(11).Item("SIGLA + HORÁRIO").ToString)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <umab:OutlookApplicationCard Account="estagiocargill2024@ciadetalentos.com" AccountMismatchBehavior="Fail" DisplayName="Use Desktop Outlook App - Envia email" sap:VirtualizedContainerService.HintSize="548,839" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_4">
+              <umab:OutlookApplicationCard.Body>
+                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Sequence Outlook" sap:VirtualizedContainerService.HintSize="514,625" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="s:DateTime" Name="vDateReuniao" />
+                      <Variable x:TypeArguments="x:String" Name="vStdataEvento" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="estagiocargill2024@ciadetalentos.com" Body="[vStBody]" DisplayName="Send Outlook Mail Message - Envia email" sap:VirtualizedContainerService.HintSize="452,178" sap2010:WorkflowViewState.IdRef="SendOutlookMail_24" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[CurrentRow(&quot;Assunto&quot;).ToString]" To="[CurrentRow(&quot;E-mails Gestores&quot;).ToString]">
+                      <ui:SendOutlookMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">C:\Processos\CiaTalentos\Cargill\Discovery\Entrads_Perofomer_Cargil\Avaliação Etapa final - Programa de Estágio Cargill.xlsx</InArgument>
+                        </scg:List>
+                      </ui:SendOutlookMail.Files>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:SendOutlookMail>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,359" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="estagiocargill2024@ciadetalentos.com" Body="[vStBody]" DisplayName="Send Outlook Mail Message - Envia email" sap:VirtualizedContainerService.HintSize="354,169" sap2010:WorkflowViewState.IdRef="SendOutlookMail_23" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[CurrentRow(&quot;Assunto&quot;).ToString]" To="renan.santos@ciadetalentos.com">
+                            <ui:SendOutlookMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">C:\Processos\CiaTalentos\Cargill\Discovery\Entrads_Perofomer_Cargil\Avaliação Etapa final - Programa de Estágio Cargill.xlsx</InArgument>
+                              </scg:List>
+                            </ui:SendOutlookMail.Files>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendOutlookMail>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                  </Sequence>
+                </ActivityAction>
+              </umab:OutlookApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umab:OutlookApplicationCard>
+            <ui:LogMessage DisplayName="Log Message - Dados enviados" sap:VirtualizedContainerService.HintSize="548,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[CurrentRow(&quot;E-mails Gestores&quot;).ToString  &amp; &quot; &quot; &amp; vStBody]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644,75" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,261" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <umab:CreateHtmlContent DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="434,176" HtmlContent="[vStBody]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_1">
+            <umab:CreateHtmlContent.HtmlContentArg>
+              <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="&lt;HTML&gt;&lt;HEAD&gt;&#xA;&lt;STYLE type=text/css&gt;&#xA;        body {&#xA;            font-family: Calibri;&#xA;        }&#xA;&#xA;        p {&#xA;            margin: 0;&#xA;        }&#xA;&#xA;        .mapping {&#xA;            background-color: #D3D4D7;&#xA;            color: black;&#xA;            padding: 1px;&#xA;        }&#xA;    &lt;/STYLE&gt;&#xA;&lt;!-- Instruct the web browser control to use IE 6 to render the page. --&gt;&#xA;&lt;META content=IE=6 http-equiv=X-UA-Compatible&gt;&lt;/HEAD&gt;&#xA;&lt;BODY&gt;&#xA;&lt;P&gt;Olá, gestor (a)! Tudo bem?&lt;BR&gt;&amp;nbsp;&lt;BR&gt;Enviamos os materiais e informações para a sua Etapa Final do Programa de Estágio Cargill que acontecerá no dia agendado anteriormente.&lt;BR&gt;Para acessar os currículos das pessoas candidatas à sua vaga, clique no link a seguir:&lt;BR&gt;Para acessar a sala no dia do evento, clique em:&lt;BR&gt;O(s) horário(s) do(s) evento(s) será(ão):&lt;/P&gt;&#xA;&lt;P&gt;&lt;BR&gt;&lt;BR&gt;&amp;nbsp;&lt;BR&gt;Lembrando que acima está sendo considerado o horário de Brasília.&lt;BR&gt;Em anexo, enviamos uma planilha de avaliação para que possa guiar sua avaliação no momento do evento. O uso dessa planilha é opcional, não sendo obrigatório o preenchimento.&lt;BR&gt;&amp;nbsp;&lt;BR&gt;Seguimos à disposição, caso tenha dúvidas.&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;">
+                <umabh:HtmlContentArgument.RuntimeImages>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </umabh:HtmlContentArgument.RuntimeImages>
+                <umabh:HtmlContentArgument.ValueMappings>
+                  <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                </umabh:HtmlContentArgument.ValueMappings>
+              </umabh:HtmlContentArgument>
+            </umab:CreateHtmlContent.HtmlContentArg>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </umab:CreateHtmlContent>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

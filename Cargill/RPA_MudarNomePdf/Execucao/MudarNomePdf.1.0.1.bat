@@ -1,0 +1,1 @@
+"C:\Users\Guilherme\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" execute --file "C:\Processos\CiaTalentos\Cargill\RPA_MudarNomePdf\Package\MudarNomePdf.1.0.1.nupkg"

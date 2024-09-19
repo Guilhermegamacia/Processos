@@ -12,8 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "vDtMalaDireta&Sequence_1",
-        "vStBody&Sequence_3"
+        "vDtArquivoPdf&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

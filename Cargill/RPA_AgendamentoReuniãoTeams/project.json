@@ -1,0 +1,67 @@
+{
+  "name": "AgendamentoReuniaoTeams_Windows",
+  "projectId": "777d5c6a-e865-492e-9011-92f8dea1002c",
+  "description": "Realiza agendamento de reuniões através do outlook pelo teams.",
+  "main": "Main.xaml",
+  "dependencies": {
+    "TeamsMeetingAPIClient": "1.0.8",
+    "UiPath.Excel.Activities": "[2.16.2]",
+    "UiPath.IntegrationService.Activities": "[1.5.0]",
+    "UiPath.Mail.Activities": "[1.15.2]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.6.21]",
+    "UiPath.MicrosoftTeams.IntegrationService.Activities": "[5.0.5-preview]",
+    "UiPath.OCR.Activities": "[3.15.1]",
+    "UiPath.System.Activities": "[24.5.0-preview]",
+    "UiPath.UIAutomation.Activities": "[22.4.7]",
+    "UiPath.Word.Activities": "[1.19.2-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.4.4.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": false,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "c06ac7a3-d06f-498b-ba3c-72886dfe1303",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
