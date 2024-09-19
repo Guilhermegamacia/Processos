@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+Projeto_Concorrencia.egg-info/PKG-INFO
+Projeto_Concorrencia.egg-info/SOURCES.txt
+Projeto_Concorrencia.egg-info/dependency_links.txt
+Projeto_Concorrencia.egg-info/top_level.txt
