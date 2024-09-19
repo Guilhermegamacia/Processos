@@ -1,0 +1,10 @@
+"<html><head><style> mark {background-color: yellow;  color: black;} </style>"+"Olá, " +  "<br/tag><br/tag>" + "A PwC em parceria com a Cia de Talentos está selecionando a nova geração de <i>solvers</i> para Assurance – FY 2023. Recebemos sua indicação de pessoa(s) candidata(s) para do processo seletivo da <b>nova geração de solvers PwC.</b><br/tag><br/tag>" + "Segue abaixo o status da(s) pessoa(s) indicada(s) na etapa de <b>Inscrição:</b><br/tag><br/tag>" + relatorio + "<br/tag><br/tag>" + "<i>. Aprovado em Triagem de pré-requisitos = estará elegível ao ranking após realizar os testes online.</i><br/tag><br/tag>" + "<i>. Reprovado em Triagem de pré-requisitos = não está elegível ao ranking pois não apresenta um ou mais critérios da vaga escolhida.</i><br/tag><br/tag>" + "Caso não esteja de acordo com o status do(s) seu indicado(s), <b>não responda esse e-mail.</b> Escreva para georgia.bfigueiredo@pwc.com e fabiola.brenelli@ciadetalentos.com informando se deveremos flexibilizar algum critério e considerar a indicação para a próxima etapa do processo seletivo.<br/tag><br/tag>" + "Para pessoas candidatas que foram reprovadas em triagem de pré-requisitos, formalizaremos o retorno negativo por e-mail a partir de <b>14/07/2023.</b><br/tag><br/tag>" + "Obrigada!<br/tag><br/tag>" + "Cia de Talentos e PwC Talent Acquisition"
+
+
+.
+ 
+
+
+
+
+"<html><head><style> mark {background-color: yellow;  color: black;} </style>"+"Olá, " +  "<br/tag><br/tag>" + "Recebemos sua indicação de pessoa(s) candidata(s) para do processo seletivo da nova geração <b>de solvers PwC.</b><br/tag><br/tag>" + "Segue abaixo o status da(s) pessoa(s) indicada(s):<br/tag><br/tag>" + relatorio + "<br/tag><br/tag>" + "Caso não esteja de acordo com o status do(s) seu indicado(s), <b>não responda esse e-mail.</b> Escreva para fabiola.brenelli@ciadetalentos.com e georgia.bfigueiredo@pwc.com.<br/tag><br/tag>" + "Obrigada!<br/tag><br/tag>" + "Cia de Talentos"

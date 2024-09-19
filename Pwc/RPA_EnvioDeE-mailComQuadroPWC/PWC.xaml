@@ -1,0 +1,417 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="3034,5961" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:aea="clr-namespace:AtoS.Excel_to_Html.Activities;assembly=AtoS.Excel_to_Html.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="84">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>AtoS.Excel_to_Html.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>AtoS.Excel_to_Html.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="1022,5896" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="abaNome" />
+      <Variable x:TypeArguments="x:Int32" Name="contador" />
+      <Variable x:TypeArguments="sd:DataTable" Name="abaCopia" />
+      <Variable x:TypeArguments="sd:DataTable" Name="abaQuadro" />
+      <Variable x:TypeArguments="sd:DataTable" Name="colunaNome" />
+      <Variable x:TypeArguments="x:String" Name="relatorio" />
+      <Variable x:TypeArguments="x:String" Name="logo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="960,5785" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="QuadroPWC.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="926,5675" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="body" />
+              <Variable x:TypeArguments="x:String" Name="nome" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[abaQuadro]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="864,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="A1:N3000" SheetName="Quadro" />
+            <Assign sap:VirtualizedContainerService.HintSize="864,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[colunaNome]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[abaQuadro.DefaultView.ToTable(False,abaQuadro.Columns("SOCIO RESPONSAVEL").ColumnName)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[colunaNome]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="864,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="nomeGestor">
+              <ui:ExcelWriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelWriteRange.StartingCell>
+            </ui:ExcelWriteRange>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[abaNome]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="864,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" SheetName="nomeGestor">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:RemoveDuplicateRows DataTable="[abaNome]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="864,80" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[abaNome]" />
+            <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="864,133" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:A3000" SheetName="nomeGestor" ShiftCells="True" ShiftOption="EntireRow" />
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[abaNome]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="864,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="nomeGestor" StartingCell="A2:A3000" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[abaNome]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="864,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" SheetName="nomeGestor">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <Assign sap:VirtualizedContainerService.HintSize="864,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">2</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[abaNome]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="864,4429" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="830,4309" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="assunto" />
+                      <Variable x:TypeArguments="x:String" Name="emailGestorSubstituto" />
+                      <Variable x:TypeArguments="x:String" Name="nomeGestor" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelReadCell Cell="[&quot;A&quot;+contador.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="768,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="nomeGestor">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[nome]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ExcelReadCell>
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="768,4109" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7" ShowExcelWindow="False">
+                      <ueab:ExcelProcessScopeX.Body>
+                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="734,4022" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="O caminho do Excel tem que ser o mesmo do que está acima, e guardar alterações e ficheiro de modelo tem que estar habilitado também" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="672,3914" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" TemplatePath="QuadroPWC.xlsx" UseTemplate="True" WorkbookPath="QuadroPWC.xlsx">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="excel" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="638,3582" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="576,3474" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="514,3363" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="sd:DataTable" Name="abacopiaEnvio" />
+                                          <Variable x:TypeArguments="x:String" Name="finish" />
+                                          <Variable x:TypeArguments="x:String" Name="emailSocio" />
+                                          <Variable x:TypeArguments="x:String" Name="workbookPath">
+                                            <Variable.Default>
+                                              <Literal x:TypeArguments="x:String">C:\Processos\CiaTalentos\PWC\Envio de E-mail com quadro PWC\QuadroPWC.xlsx</Literal>
+                                            </Variable.Default>
+                                          </Variable>
+                                          <Variable x:TypeArguments="x:String" Name="emailConsultor" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ueab:FilterX ClearFilter="False" ColumnName="[excel.Sheet(&quot;Quadro&quot;).Cell(&quot;E1&quot;)]" DisplayName="Filtra o Gestor" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,169" sap2010:WorkflowViewState.IdRef="FilterX_3" Range="[excel.Sheet(&quot;Quadro&quot;)]">
+                                          <ueab:FilterX.FilterArgument>
+                                            <ueabf:FilterArgument Mode="Basic">
+                                              <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                                  <ueabf:AdvancedFilterArgument.Condition1>
+                                                    <ueabf:AdvancedFilterCondition Operator="NONE">
+                                                      <ueabf:AdvancedFilterCondition.Value>
+                                                        <InArgument x:TypeArguments="x:String" />
+                                                      </ueabf:AdvancedFilterCondition.Value>
+                                                    </ueabf:AdvancedFilterCondition>
+                                                  </ueabf:AdvancedFilterArgument.Condition1>
+                                                  <ueabf:AdvancedFilterArgument.Condition2>
+                                                    <ueabf:AdvancedFilterCondition Operator="NONE">
+                                                      <ueabf:AdvancedFilterCondition.Value>
+                                                        <InArgument x:TypeArguments="x:String" />
+                                                      </ueabf:AdvancedFilterCondition.Value>
+                                                    </ueabf:AdvancedFilterCondition>
+                                                  </ueabf:AdvancedFilterArgument.Condition2>
+                                                </ueabf:AdvancedFilterArgument>
+                                              </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                              <ueabf:FilterArgument.BasicFiltersArgument>
+                                                <ueabf:BasicFilterArgument>
+                                                  <ueabf:BasicFilterArgument.BasicFilters>
+                                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                      <InArgument x:TypeArguments="x:String">[nome]</InArgument>
+                                                    </scg:List>
+                                                  </ueabf:BasicFilterArgument.BasicFilters>
+                                                </ueabf:BasicFilterArgument>
+                                              </ueabf:FilterArgument.BasicFiltersArgument>
+                                            </ueabf:FilterArgument>
+                                          </ueab:FilterX.FilterArgument>
+                                        </ueab:FilterX>
+                                        <ueab:CopyPasteRangeX DestinationRange="[excel.Sheet(&quot;copia&quot;)]" DisplayName="copia e cola na aba &quot;copia&quot;" sap:VirtualizedContainerService.HintSize="452,211" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_3" PasteOptions="All" SourceRange="[excel.Sheet(&quot;Quadro&quot;)]" Transpose="False" />
+                                        <ueab:CopyPasteRangeX DestinationRange="[excel.Sheet(&quot;copiaTabEnvio&quot;)]" DisplayName="copia e cola na aba &quot;copia&quot;" sap:VirtualizedContainerService.HintSize="452,211" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_5" PasteOptions="All" SourceRange="[excel.Sheet(&quot;Quadro&quot;)]" Transpose="False" />
+                                        <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="452,133" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A1:AP3000" SheetName="copia" ShiftCells="True" ShiftOption="EntireRow" />
+                                        <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="452,133" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A1:AP3000" SheetName="copiaTabEnvio" ShiftCells="True" ShiftOption="EntireRow" />
+                                        <ueab:CopyPasteRangeX DestinationRange="[excel.Sheet(&quot;copia&quot;)]" DisplayName="copia e cola na aba &quot;copia&quot;" sap:VirtualizedContainerService.HintSize="452,211" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_4" PasteOptions="All" SourceRange="[excel.Sheet(&quot;Quadro&quot;).Range(&quot;A:L&quot;)]" Transpose="False" />
+                                        <ueab:CopyPasteRangeX DestinationRange="[excel.Sheet(&quot;copiaTabEnvio&quot;)]" DisplayName="copia e cola na aba &quot;copia&quot;" sap:VirtualizedContainerService.HintSize="452,211" sap2010:WorkflowViewState.IdRef="CopyPasteRangeX_6" PasteOptions="All" SourceRange="[excel.Sheet(&quot;Quadro&quot;).Range(&quot;A:D&quot;)]" Transpose="False" />
+                                        <ui:ExcelReadRange AddHeaders="True" DataTable="[abaCopia]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" PreserveFormat="True" SheetName="copia">
+                                          <ui:ExcelReadRange.Range>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <Literal x:TypeArguments="x:String" Value="" />
+                                            </InArgument>
+                                          </ui:ExcelReadRange.Range>
+                                        </ui:ExcelReadRange>
+                                        <ui:ExcelReadRange AddHeaders="True" DataTable="[abacopiaEnvio]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" PreserveFormat="True" SheetName="copiaTabEnvio">
+                                          <ui:ExcelReadRange.Range>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <Literal x:TypeArguments="x:String" Value="" />
+                                            </InArgument>
+                                          </ui:ExcelReadRange.Range>
+                                        </ui:ExcelReadRange>
+                                        <aea:HtmlTableFromExcel ContinueOnError="{x:Null}" DisplayName="Html Table from Excel" sap:VirtualizedContainerService.HintSize="452,133" sap2010:WorkflowViewState.IdRef="HtmlTableFromExcel_3" Result="[relatorio]" SheetNameOrSheetIndex="[&quot;copiaTabEnvio&quot;]" WorkbookPath="[workbookPath]" boolBorder="True" />
+                                        <ui:ExcelReadCell Cell="E2" DisplayName="Nome Sócio" sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="copia">
+                                          <ui:ExcelReadCell.Result>
+                                            <OutArgument x:TypeArguments="x:String">[nomeGestor]</OutArgument>
+                                          </ui:ExcelReadCell.Result>
+                                        </ui:ExcelReadCell>
+                                        <umab:CreateHtmlContent DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="452,153" HtmlContent="[body]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_3">
+                                          <umab:CreateHtmlContent.HtmlContentArg>
+                                            <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                                              <umabh:HtmlContentArgument.RuntimeImages>
+                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                              </umabh:HtmlContentArgument.RuntimeImages>
+                                              <umabh:HtmlContentArgument.ValueMappings>
+                                                <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                                  <umabh:HtmlTextValueMapping Name="nome_socio" Value="[nomeGestor]" />
+                                                </scg:List>
+                                              </umabh:HtmlContentArgument.ValueMappings>
+                                            </umabh:HtmlContentArgument>
+                                          </umab:CreateHtmlContent.HtmlContentArg>
+                                        </umab:CreateHtmlContent>
+                                        <umab:CreateHtmlContent DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="452,153" HtmlContent="[finish]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_2">
+                                          <umab:CreateHtmlContent.HtmlContentArg>
+                                            <umabh:HtmlContentArgument FilePath=".data/HtmlContent2.html">
+                                              <umabh:HtmlContentArgument.RuntimeImages>
+                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                              </umabh:HtmlContentArgument.RuntimeImages>
+                                              <umabh:HtmlContentArgument.ValueMappings>
+                                                <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                              </umabh:HtmlContentArgument.ValueMappings>
+                                            </umabh:HtmlContentArgument>
+                                          </umab:CreateHtmlContent.HtmlContentArg>
+                                        </umab:CreateHtmlContent>
+                                        <ui:ExcelReadCell Cell="F2" DisplayName="Email Socio" sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_9" SheetName="copia">
+                                          <ui:ExcelReadCell.Result>
+                                            <OutArgument x:TypeArguments="x:String">[emailSocio]</OutArgument>
+                                          </ui:ExcelReadCell.Result>
+                                        </ui:ExcelReadCell>
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,431" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,352" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:ExcelReadCell Cell="C2" DisplayName="Assunto" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_8" SheetName="copia">
+                                                <ui:ExcelReadCell.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[assunto]</OutArgument>
+                                                </ui:ExcelReadCell.Result>
+                                              </ui:ExcelReadCell>
+                                              <ui:ExcelReadCell Cell="I2" DisplayName="Email Gestor Substituto" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_10" SheetName="copia">
+                                                <ui:ExcelReadCell.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[emailGestorSubstituto]</OutArgument>
+                                                </ui:ExcelReadCell.Result>
+                                              </ui:ExcelReadCell>
+                                              <ui:ExcelReadCell Cell="K2" DisplayName="Email Consultor" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_11" SheetName="copia">
+                                                <ui:ExcelReadCell.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[emailConsultor]</OutArgument>
+                                                </ui:ExcelReadCell.Result>
+                                              </ui:ExcelReadCell>
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                        </ui:CommentOut>
+                                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[body + relatorio + finish]" DisplayName="Send SMTP Mail Message" Email="ngpwc@ciadetalentos.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="452,146" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="eeR311qQ!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Status Indicação - nova geração de solvers PwC " To="diogenes.ribeiro@klautomation.com.br">
+                                          <ui:SendMail.Files>
+                                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                          </ui:SendMail.Files>
+                                        </ui:SendMail>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[excel.Sheet(&quot;copia&quot;).Cell(&quot;F2&quot;)]" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="452,81" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">[contador+1]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </Sequence>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:ExcelApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelProcessScopeX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelProcessScopeX>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="864,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Finalizado&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>
