@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html ng-app="applicantHotsiteApp"  lang="pt-br" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        		
+	    <meta name="dcterms.rights" content="Globe" />
+		<meta name="author" content="MCS Tecnologia">
+		<link rel="shortcut icon" href="resources/img/hotsite/favicon.ico">
+
+        <base href="/applicant/">
+        
+	    <!-- Bootstrap Core CSS -->
+	    <link href="{{buildExternalFileUrl('hotsite/template7/css/bootstrap.min.css')}}" rel="stylesheet">
+	
+	    <!-- Custom CSS -->
+	    <link href="{{buildExternalFileUrl('hotsite/template7/css/style.css')}}" rel="stylesheet">
+		
+		<!-- Google Fonts == Open Sans | Open Sans Condensed -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900" rel="stylesheet">
+		
+		<!-- Font Awesome -->
+		<script src="https://use.fontawesome.com/75814d9802.js"></script>
+
+        <!-- AngularJS scripts -->
+		<script type="text/javascript" src="resources/js/lib/angular-ca15b1974f.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-cookies-bad290d544.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-resource-f5479c7a96.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-route-2fa46b0cdc.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-translate-26052c2df3.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-translate-loader-url-11259c1753.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-smooth-scroll-b428dc5812.min.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-sanitize-d054b47388.min.js"></script>
+
+        <!-- Globe scripts -->
+		<script type="text/javascript" src="resources/js/ats/ats-services-438cc42d4c.js"></script>
+		<script type="text/javascript" src="resources/js/ats/ats-services-utils-81a53d7c68.js"></script>
+		<script type="text/javascript" src="resources/js/ats/refdata/refdata-service-01a8d74fae.js"></script>
+		<script type="text/javascript" src="resources/js/ats/ats-filters-efa12eb830.js"></script>
+		
+        <!-- Hotsite scripts -->
+		<script type="text/javascript" src="resources/js/applicant/hotsite/applicant-hotsite-app-20d5425a76.js"></script>
+		<script type="text/javascript" src="resources/js/applicant/hotsite/applicant-hotsite-controllers-7b1cb771e5.js"></script>
+				
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KB8X7TD');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- Purple Lens Scripts -->
+		<script type="text/javascript">
+		(function(){var e=document.createElement('script');e.async=true;e.defer=true;e.setAttribute("type","text/javascript");e.setAttribute("src","https://purple-lens.com/unitoolbar.js?lang=pt");document.getElementsByTagName("head")[0].appendChild(e);})();
+		</script>
+		<!-- End Purple Lens Scripts -->
+	</head>
+	
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+		<div ng-controller="HotsiteController"><div id="hotsiteHtml"></div></div>
+
+    	<!-- jQuery libs -->
+    	<script type="text/javascript" src="resources/js/applicant/hotsite/jquery-3c9137d88a.js"></script>
+    
+	    <!-- Bootstrap libs -->
+		<script type="text/javascript" src="resources/js/applicant/hotsite/bootstrap-5869c96cc8.min.js"></script>
+		
+		<!-- Scrolling Nav JavaScript -->
+	    <script type="text/javascript" src="resources/js/applicant/hotsite/jquery-9cda9e740b.easing.min.js"></script>
+	    <script type="text/javascript" src="resources/js/applicant/hotsite/scrolling-nav-1a1dd58dc2.js"></script>
+	    
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB8X7TD"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		<!-- CONTENT SHARING -->
+		<!-- TODO: Verificar utilidade e mover se possível para o S3 -->
+		<!-- <script src='resources/js/lib/angular-socialshare-f83842e282.js'></script>
+		<script src='resources/js/lib/twitter-widgets-1762ea348c.js'></script>
+		<link href="resources/css/hotsite/angular-socialshare-b4222d4aea.css"  rel="stylesheet"/> -->
+		
+		<!-- Hand Talk -->
+	    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+	    <script>
+	      var ht = new HT({
+	        token: "6e3b988a1f4e4dac100d9dc587436df2",
+	        pageSpeech: true,
+	        avatar: "MAYA"
+	      });
+	    </script>
+
+	    <!-- Assistive -->
+	    <script>
+	      (function () {
+	        var s = document.createElement("script");
+	        var h = document.querySelector("head") || document.body;
+	        s.src = "https://acsbapp.com/apps/app/dist/js/app.js";
+	        s.async = true;
+	        s.onload = function () {
+	          acsbJS.init({
+	            statementLink: "",
+	            footerHtml: "Powered by assistive",
+	            hideMobile: false,
+	            hideTrigger: false,
+	            language: "pt",
+	            position: "right",
+	            leadColor: "#003087",
+	            triggerColor: "#003087",
+	            triggerRadius: "0",
+	            triggerPositionX: "right",
+	            triggerPositionY: "top",
+	            triggerIcon: "people",
+	            triggerSize: "medium",
+	            triggerOffsetX: 0,
+	            triggerOffsetY: 100,
+	            mobile: {
+	              triggerSize: "small",
+	              triggerPositionX: "right",
+	              triggerPositionY: "top",
+	              triggerOffsetX: 0,
+	              triggerOffsetY: 100,
+	              triggerRadius: "0",
+	            },
+	          });
+	        };
+	        h.appendChild(s);
+	      })();
+	  
+	      const checkExists = setInterval(function () {
+	  
+	        //check if the languages exist
+	  
+	        if (document.getElementsByClassName("acsb-language").length) {
+	  
+	          //Once the class was found you can manipulate the language element. To hide a //language, set a specific language to be hidden by targeting the relevant language.
+	  
+	          //For example, the 9th element in this case will be hidden.
+	  
+	          document.getElementsByClassName("acsb-language")[0].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[1].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[2].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[3].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[4].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[5].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[6].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[7].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[8].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[9].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[10].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[11].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[12].style.display = "none";
+	          document.getElementsByClassName("acsb-language")[13].style.display = "none";
+	  
+	          clearInterval(checkExists);
+	  
+	        }
+	  
+	        // check every 100ms if the element loaded
+	  
+	      }, 100);
+	  
+	    </script>
+	    <!-- Assistive -->
+	</body>
+</html>
